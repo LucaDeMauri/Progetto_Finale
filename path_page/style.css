@@ -1,0 +1,86 @@
+/* inizialmente ho dato a body height 100vh e width 100vw ma questo ha portato a un eccessiva larghezza
+e altezza del body, tanto da far comparire sia la sbarra di scorrimento verticale e orizzantale, per
+questo motivo ho decisono di non utilizzare il body come container principale ma di utilizzare invece un 
+div apposito che avrà il compito di contenere tutto il contenuto della pagina*/
+
+*::-webkit-scrollbar {
+    display: none;  
+  }
+
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 99vh;
+  width: 99vw;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  overflow-x: auto;
+
+  
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items: center;
+    overflow-x: auto;
+  }
+
+  .step-path {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    margin: 0 0 5vh 0;
+
+
+  }
+
+
+
+.step-path .step:first-child{
+    margin-left: 10vw;
+}
+
+.step-path .step:last-child{
+    margin-right: 10vw;
+}
+.step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 70px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 0;
+    min-width: 8vw;
+    box-shadow: 0px 10px 10px rgb(77, 77, 77);
+    
+}
+
+
+.step:hover {
+    background-color: red;
+}
+
+
+
+.line {
+    height: 20px;
+    width: 300px;
+    background-color: black;
+    margin: -1px;
+    min-width: 20vw; 
+    box-shadow: 0px 10px 10px rgb(77, 77, 77);
+
+}
