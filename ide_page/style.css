@@ -1,0 +1,57 @@
+*::-webkit-scrollbar {
+    display: none;  
+  }
+
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content:end;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  overflow-x: auto;
+
+  
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+
+.instructions{
+  width: 45%;
+    height: 100%;
+    background-color: rgb(226, 226, 226);
+    margin: 0;
+    border: solid 3px black;
+    resize: both;
+
+}
+
+
+.ide{
+    width: 45%;
+    height: 100%;
+    border: solid 3px black;
+
+    background-color: rgb(226, 226, 226);
+    margin: 0;
+    resize: both;
+}
+
+.preview{
+    width: 45%;
+    height: 100%;
+    border: solid 3px black;
+
+    background-color: rgb(226, 226, 226);
+    margin: 0;
+    
+}
