@@ -7,6 +7,8 @@ div apposito che avrà il compito di contenere tutto il contenuto della pagina*/
     display: none;  
   }
 
+
+
 body{
   margin: 0;
   padding: 0;
@@ -21,6 +23,18 @@ body{
   overflow-x: auto;
 
   
+}
+
+#cerchio {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  top: -100vh;
+  left: -100vw;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 2.3s ease;
+  cursor: pointer;
 }
 
 .go-back-btn {
