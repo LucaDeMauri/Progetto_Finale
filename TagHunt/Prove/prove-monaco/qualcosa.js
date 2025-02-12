@@ -108,3 +108,5 @@ makeResizable(
     document.getElementById('center-panel'),
     document.getElementById('right-panel')
 );
+
+
