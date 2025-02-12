@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- vedi se puoi utilizzare embend -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monaco Editor con Shadow DOM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs/editor/editor.main.css">
+    <link rel="stylesheet" href="qualcosa.css">
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmlhint@latest/dist/htmlhint.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="panel" id="left-panel">
+            
+        </div>
+        <div class="resizer" id="splitter-1"></div>
+        <div class="panel" id="center-panel">
+            <div id="editor"></div>
+        </div>
+        <div class="resizer" id="splitter-2"></div>
+        <div class="panel" id="right-panel">
+            <div id="result"></div> <!-- Contenitore per il contenuto isolato -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/htmlhint/0.14.0/htmlhint.min.js"></script>
+    <script src="qualcosa.js"></script>
+</body>
+</html>

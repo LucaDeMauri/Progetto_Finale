@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.container {
+  display: flex;
+  height: 70vh;
+  width: 100%;
+}
+
+.panel {
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  flex-grow: 1;
+  min-width: 20vw;
+  overflow: auto;
+}
+
+#left-panel { background-color: #e1f5fe; }
+#center-panel { background-color: aqua; }
+#right-panel { background-color: #ffecb3; }
+
+.resizer {
+  min-width: 10px;
+  background-color: #ccc;
+  cursor: ew-resize;
+  height: 100%;
+}
+
+#editor, #result {
+  height: 100%;
+  width: 100%;
+}

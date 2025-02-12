@@ -8,7 +8,7 @@ document.addEventListener('click', function(event) {
 
       // Dopo 1.5 secondi (durata della transizione), passa alla seconda pagina
       setTimeout(() => {
-        window.location.href = "../ide_page/index.html";
+        window.location.href = "../prove-monaco/qualcosa.html";
       }, 2000);
 
       }
