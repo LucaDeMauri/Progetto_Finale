@@ -1,5 +1,6 @@
 require.config({ paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs' } });
 
+
 let editorInstance;  // Variabile per l'istanza del Monaco Editor
 
 require(['vs/editor/editor.main'], function () {

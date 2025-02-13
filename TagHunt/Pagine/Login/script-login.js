@@ -26,6 +26,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
             document.getElementById("message").style.color = "green";
             document.getElementById("message").innerText = users[i].nome + " " + users[i].cognome;
             document.getElementById("benvenuto").innerText = "Benvenuto";
+            window.location.href="../path_page/prova.html"
             return;
         }
         else{

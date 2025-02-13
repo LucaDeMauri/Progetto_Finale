@@ -8,13 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs/editor/editor.main.css">
     <link rel="stylesheet" href="qualcosa.css">
     <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/htmlhint@latest/dist/htmlhint.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmlhint@1.1.4/dist/htmlhint.min.jss"></script>
+
 
 </head>
 <body>
     <div class="container">
         <div class="panel" id="left-panel">
-            
+            <div class="instructions">
+                <div class="title"></div>
+                <p id="descrizione">dfsdgsgasg sgdsdgsd gsfgdfgdfg dfgdfgd fgdfgdfgd fgdgdfgdfgdgh dfjghjhgh adfadfsfg dfwsfgdfgf fgqfasdfas sdfsadgsgd sdasgsdgs sdgsgdfgfg sdgsgsgs sgsfgsfgsdg sgsgsdsg sdgsdgafg sdgsgsgsd sgsfgsgdsd sdg sdgsgsgsgs sgd sgsdg sdgsd ssgsgd sdg sgsdsdgsdg sd sadgsdg sg sg sg sdgsgsdgsdgs sdg sgsgsgs s sgsdg </p>
+                <p id="instructions-rows">1. adfsdasdgsda dfdfsdfd sdfs sdfsdgsd sdfsd dfsdfsd dsfsdf fdsfs</p>
+                <button id="invio-codice" class="submit-button">Invia Codice!</button>
+                <button id="invio_riprova" class="submit-button">Riprova</button>
+
+                
+            </div>
         </div>
         <div class="resizer" id="splitter-1"></div>
         <div class="panel" id="center-panel">
@@ -42,7 +51,14 @@
                     const tappa = dati.tappe[id-1];
             console.log(tappa)
 
-            document.getElementById('left-panel').innerHTML = tappa.titolo;
+            document.getElementsByClassName('title')[0].innerText = tappa.titolo;
+            document.getElementById('descrizione').innerText = tappa.descrizione;
+            document.getElementById('instructions-rows').innerText = tappa.consegna;
+
+            
+
+
+            console.log(tappa.titolo)
         })
     </script>
 </body>

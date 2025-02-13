@@ -4,11 +4,19 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  display: none;  
+}
+
 body {
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column-reverse;
+}
+
+span{
+  background-color: rgb(205, 205, 205);
 }
 
 .container {
@@ -18,6 +26,10 @@ body {
 }
 
 .panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
   border: 1px solid #ccc;
   background-color: #f4f4f4;
   flex-grow: 1;
@@ -25,9 +37,49 @@ body {
   overflow: auto;
 }
 
-#left-panel { background-color: #e1f5fe; }
-#center-panel { background-color: aqua; }
-#right-panel { background-color: #ffecb3; }
+.instructions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 90%;
+
+}
+
+.title{
+  margin-top: 4vh;
+  width: 75%;
+  height: 5vh;
+  background-color: rgb(206, 206, 206);
+  border: solid black 1px;
+}
+
+#descrizione{
+  margin-top: 5vh;
+  word-wrap: break-word;
+}
+
+#instructions-rows{
+  margin-top: 5vh;
+  word-wrap: break-word;
+}
+
+.submit-button{
+  margin-top: 4vh;
+  width: 30%;
+  height: 5vh;
+  background-color: rgb(236, 236, 236);
+  border: solid black 1px;
+  cursor: pointer;
+}
+
+.submit-button:hover{
+  background-color: rgb(206, 206, 206);
+}
+
+#left-panel { background-color: #ffffff; }
+#center-panel { background-color: rgb(255, 255, 255); }
+#right-panel { background-color: #ffffff; }
 
 .resizer {
   min-width: 10px;
