@@ -11,6 +11,7 @@
         "consegna": "Scrivi il tag <!DOCTYPE html> all'inizio del tuo file.",
         "consiglio": "Controlla bene quello che hai scritto. Potrebbero esserci errori di battitura!",
         "tempo": "",
+        "errori": "",
         "tag-scoperti": [ 
           "<!DOCTYPE html>"
         ]
@@ -26,6 +27,7 @@
         "consegna": "Scrivi il tag <!DOCTYPE html> all'inizio del tuo file.",
         "consiglio": "Controlla bene quello che hai scritto. Potrebbero esserci errori di battitura!",
         "tempo": "",
+        "errori": "",
         "tag-scoperti": [ 
           "<!DOCTYPE html>"
         ]

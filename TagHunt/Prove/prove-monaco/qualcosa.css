@@ -15,13 +15,21 @@ body {
   flex-direction: column-reverse;
 }
 
-span{
-  background-color: rgb(205, 205, 205);
+#cerchio {
+  width: 300vw;
+  height: 300vw;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  left: -100vw;
+  top: -100vw;
+  transition: all 2.3s ease;
+  z-index: 100;
 }
 
 .container {
   display: flex;
-  height: 70vh;
+  height: 80vh;
   width: 100%;
 }
 

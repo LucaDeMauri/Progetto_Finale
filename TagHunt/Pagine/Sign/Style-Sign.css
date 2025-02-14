@@ -1,5 +1,8 @@
 
   body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -7,7 +10,7 @@
   }
 
 .form_main {
-  position: relative;
+
     width: 280px;
     display: flex;
     flex-direction: column;

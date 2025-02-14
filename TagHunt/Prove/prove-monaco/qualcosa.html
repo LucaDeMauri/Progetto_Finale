@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs/editor/editor.main.css">
     <link rel="stylesheet" href="qualcosa.css">
     <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/htmlhint@1.1.4/dist/htmlhint.min.jss"></script>
-
 
 </head>
 <body>
+    <div id="cerchio"></div>
     <div class="container">
         <div class="panel" id="left-panel">
             <div class="instructions">
@@ -31,12 +30,11 @@
         </div>
         <div class="resizer" id="splitter-2"></div>
         <div class="panel" id="right-panel">
-            <div id="result"></div> <!-- Contenitore per il contenuto isolato -->
+            <div id="result"></div> 
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs/loader.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/htmlhint/0.14.0/htmlhint.min.js"></script>
     <script src="qualcosa.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function(){

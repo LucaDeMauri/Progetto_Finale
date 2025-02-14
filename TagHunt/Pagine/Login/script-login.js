@@ -31,7 +31,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
         }
         else{
             document.getElementById("message").style.color = "red";
-            document.getElementById("message").innerText = "password o email errate";
+            document.getElementById("message").innerText = "password o email errata";
         }
     }
     }

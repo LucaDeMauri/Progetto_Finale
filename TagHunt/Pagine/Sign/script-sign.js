@@ -48,6 +48,13 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
      // tramite questa riga di codice non faccio altro che convertire la stringa json in un array di oggetti js
      let users = JSON.parse(localStorage.getItem('users')) || [];/*l'operatore logico OR mi serve perché la prima volta users
                                                                     non è ancora creato e il localstorage di default è un json vuoto*/
+    for (let user of users) {
+        if(user.email === email){
+            document.getElementById("message").style.color = "red";
+            document.getElementById("message").innerText = "email già utilizzta";
+            return
+        }
+    }
 
      // a questo punto aggiungo il nuovo utente all'array users, che non è altro che un array di utenti e quindi di oggetti
      users.push(user);

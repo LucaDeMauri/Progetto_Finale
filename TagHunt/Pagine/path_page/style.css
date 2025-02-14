@@ -35,54 +35,21 @@ body{
   position: absolute;
   transition: all 2.3s ease;
   cursor: pointer;
-}
-
-.go-back-btn {
-  position: fixed;
-  top: 3vh;
-  left: 0;
-  cursor: pointer;
-  padding: 0; 
-  background: none;
-  border: none;
-}
-
-.go-back-icon {
-  stroke: #93c5fd; /* Colore blu */
-  transition: transform 0.2s ease;
-  
-}
-
-.go-back-btn:hover .go-back-icon {
-  transform: scale(1.25); /* Solo l'icona cresce durante l'hover */
-}
-
-.go-back-btn:active .go-back-icon {
-  transform: scale(1); /* La freccia torna alla dimensione originale quando si fa clic */
-}
-
-.account-icon{
-  position: fixed;
-  top: 3vh;
-  right: 3vh;
-  cursor: pointer;
-  padding: 0; 
-  background: none;
-  border: none;
-
+  z-index: 100;
 }
 
 
-  .step-path {
-    width: 100%;
-    height: 30%;
-    display: flex;
-    align-items: center;
-    overflow-x: auto;
-    margin: 0 0 5vh 0;
+
+.step-path {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  margin: 0 0 5vh 0;
 
 
-  }
+}
 
 
 

@@ -43,13 +43,36 @@
 
 #xp-min{
   margin-left: 5%;
+  font-size: 10px;
+  font-weight:bold;
+  font-family: 'Montserrat';
 }
 
 #xp-max{
   margin-right: 5%;
-}
-
-p{
+  font-size: 10px;
   font-weight:bold;
   font-family: 'Montserrat';
 }
+
+#xp-text{
+  font-size: 70px;
+  margin: 0;
+  font-weight:bold;
+  font-family: 'Montserrat';
+}
+
+#liv-attuale{
+  font-size: 20px;
+  margin: 0;
+  font-weight:bold;
+  font-family: 'Montserrat';
+}
+
+#liv-successivo{
+  font-size: 20px;
+  margin: 0;
+  font-weight:bold;
+  font-family: 'Montserrat';
+}
+

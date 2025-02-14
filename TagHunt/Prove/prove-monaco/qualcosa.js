@@ -1,27 +1,40 @@
 require.config({ paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs' } });
 
 
-let editorInstance;  // Variabile per l'istanza del Monaco Editor
+let editor;  // Variabile per il Monaco Editor
+const submit = document.getElementById("invio-codice");
+
+window.addEventListener('load', () => {
+    // Dopo il caricamento della pagina, il cerchio si rimpicciolisce
+    const cerchio = document.getElementById('cerchio');
+    setTimeout(() => {
+      cerchio.style.width = '100px';
+      cerchio.style.height = '100px';
+      cerchio.style.left = '-2000px';
+      cerchio.style.top = '-1000px';
+    }, 200);
+  });
 
 require(['vs/editor/editor.main'], function () {
-    editorInstance = monaco.editor.create(document.getElementById('editor'), {
+    editor = monaco.editor.create(document.getElementById('editor'), {
         value: "",
         language: 'html',
         theme: 'vs-dark'
     });
 
-    // Monitora ogni cambiamento nel Monaco Editor
-    editorInstance.onDidChangeModelContent(function () {
-        const code = editorInstance.getValue();
+    // Monitora ogni cambiamento nel' Editor
+    editor.onDidChangeModelContent(function () {
+        const code = editor.getValue();
         updateResult(code);
-        validateHTML(code);
+        
     });
 
     // Inizializza il contenuto del risultato con il codice iniziale
-    updateResult(editorInstance.getValue());
+    updateResult(editor.getValue());
 });
 
 // Funzione per aggiornare il contenuto del div #result usando Shadow DOM
+
 function updateResult(code) {
     const resultDiv = document.getElementById('result');
     let shadowRoot = resultDiv.shadowRoot;
@@ -41,7 +54,7 @@ function updateResult(code) {
     shadowRoot.innerHTML = `
         <style>
             body {
-                font-family: 'Courier New', Courier, monospace;
+                font-family: 'sans-serif';
                 padding: 10px;
             }
             ${styles}  /* Applichiamo gli stili dinamici */
@@ -51,22 +64,23 @@ function updateResult(code) {
 }
 
 // Funzione per convalidare il codice HTML
-function validateHTML(code) {
-    const result = HTMLHint.verify(code);
-    if (result.length > 0) {
-        console.log('Errori di validazione:');
-        result.forEach(function (error) {
-            console.log('Linea ' + error.line + ': ' + error.message);
-        });
-    } else {
-        console.log('Il codice HTML è valido.');
-    }
+
+function validateCode(code) {
+   
+
 }
+
+submit.addEventListener('click', function(){
+validateCode(code);
+})
+
+
+
 
 // Funzione per aggiornare il layout del Monaco Editor
 function updateEditorLayout() {
-    if (editorInstance) {
-        editorInstance.layout();  // Forza l'aggiornamento del layout
+    if (editor) {
+        editor.layout();  // Forza l'aggiornamento del layout
     }
 }
 
