@@ -11,53 +11,79 @@
 
 </head>
 <body>
-    <div id="cerchio"></div>
-    <div class="container">
-        <div class="panel" id="left-panel">
-            <div class="instructions">
-                <div class="title"></div>
-                <p id="descrizione">dfsdgsgasg sgdsdgsd gsfgdfgdfg dfgdfgd fgdfgdfgd fgdgdfgdfgdgh dfjghjhgh adfadfsfg dfwsfgdfgf fgqfasdfas sdfsadgsgd sdasgsdgs sdgsgdfgfg sdgsgsgs sgsfgsfgsdg sgsgsdsg sdgsdgafg sdgsgsgsd sgsfgsgdsd sdg sdgsgsgsgs sgd sgsdg sdgsd ssgsgd sdg sgsdsdgsdg sd sadgsdg sg sg sg sdgsgsdgsdgs sdg sgsgsgs s sgsdg </p>
-                <p id="instructions-rows">1. adfsdasdgsda dfdfsdfd sdfs sdfsdgsd sdfsd dfsdfsd dsfsdf fdsfs</p>
-                <button id="invio-codice" class="submit-button">Invia Codice!</button>
-                <button id="invio_riprova" class="submit-button">Riprova</button>
+        <nav>
+        <div id="cerchio"></div>
+        <svg width="130" height="40" xmlns="http://www.w3.org/2000/svg">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Montserrat');
+                text { font-family: 'Montserrat'; }
+            </style>
+            <text x="50%" y="50%" font-size="20" font-weight="bold" fill="black"
+                text-anchor="middle" dominant-baseline="middle">
+                &lt;TagHunter&gt;
+            </text>
+        </svg>
+        
+        <div class="xp-progress-container">
+            <p id="xp-text"></p> 
+            <div class="progress-bar-container">
+                <p id="liv-attuale">1</p>
+                <div class="progress-container">
+                    <div class="progress-bar" id="xp-bar"></div>
+                </div>
+                <p id="liv-successivo">2</p>
+            </div>
+            <div class="xp-progress-min-max">
+                <p id="xp-min">0xp</p>
+                <p id="xp-max">5000xp</p>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="panel" id="left-panel">
+                <div class="instructions">
+                    <div class="title"></div>
+                    <p id="descrizione">dfsdgsgasg sgdsdgsd gsfgdfgdfg dfgdfgd fgdfgdfgd fgdgdfgdfgdgh dfjghjhgh adfadfsfg dfwsfgdfgf fgqfasdfas sdfsadgsgd sdasgsdgs sdgsgdfgfg sdgsgsgs sgsfgsfgsdg sgsgsdsg sdgsdgafg sdgsgsgsd sgsfgsgdsd sdg sdgsgsgsgs sgd sgsdg sdgsd ssgsgd sdg sgsdsdgsdg sd sadgsdg sg sg sg sdgsgsdgsdgs sdg sgsgsgs s sgsdg </p>
+                    <p id="instructions-rows">1. adfsdasdgsda dfdfsdfd sdfs sdfsdgsd sdfsd dfsdfsd dsfsdf fdsfs</p>
+                    <button id="invio-codice" class="submit-button">Invia Codice!</button>
+                    <button id="invio_riprova" class="submit-button">Riprova</button>
 
-                
+                    
+                </div>
+            </div>
+            <div class="resizer" id="splitter-1"></div>
+            <div class="panel" id="center-panel">
+                <div id="editor"></div>
+            </div>
+            <div class="resizer" id="splitter-2"></div>
+            <div class="panel" id="right-panel">
+                <div id="result"></div> 
             </div>
         </div>
-        <div class="resizer" id="splitter-1"></div>
-        <div class="panel" id="center-panel">
-            <div id="editor"></div>
-        </div>
-        <div class="resizer" id="splitter-2"></div>
-        <div class="panel" id="right-panel">
-            <div id="result"></div> 
-        </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs/loader.js"></script>
-    <script src="qualcosa.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function(){
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs/loader.js"></script>
+        <script src="qualcosa.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
 
-            const params = new URLSearchParams(window.location.search);
-            let id = params.get('id');
-            console.log(id);
+                const params = new URLSearchParams(window.location.search);
+                let id = params.get('id');
+                console.log(id);
 
-            let dati = localStorage.getItem('tappe');
-            dati = JSON.parse(dati);
-                    console.log("Dati nel localStorage:", dati);
-                    const tappa = dati.tappe[id-1];
-            console.log(tappa)
+                let dati = localStorage.getItem('tappe');
+                dati = JSON.parse(dati);
+                        console.log("Dati nel localStorage:", dati);
+                        const tappa = dati.tappe[id-1];
+                console.log(tappa)
 
-            document.getElementsByClassName('title')[0].innerText = tappa.titolo;
-            document.getElementById('descrizione').innerText = tappa.descrizione;
-            document.getElementById('instructions-rows').innerText = tappa.consegna;
+                document.getElementsByClassName('title')[0].innerText = tappa.titolo;
+                document.getElementById('descrizione').innerText = tappa.descrizione;
+                document.getElementById('instructions-rows').innerText = tappa.consegna;
 
-            
+                
 
 
-            console.log(tappa.titolo)
-        })
-    </script>
+                console.log(tappa.titolo)
+            })
+        </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-let xp = 0;
+var xp = 0;
 let minXp = 0;
 let maxXp = 5000;
 const xpBar = document.getElementById('xp-bar');

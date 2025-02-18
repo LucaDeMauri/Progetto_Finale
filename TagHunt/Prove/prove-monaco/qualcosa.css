@@ -12,7 +12,8 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #cerchio {
@@ -27,9 +28,20 @@ body {
   z-index: 100;
 }
 
+nav{
+  display: flex;
+  height: 15vh;
+  align-items: center;
+  justify-content:space-between;
+}
+
+svg{
+  margin-left: 20px;
+}
+
 .container {
   display: flex;
-  height: 80vh;
+  height: 85vh;
   width: 100%;
 }
 
@@ -100,3 +112,87 @@ body {
   height: 100%;
   width: 100%;
 }
+
+
+
+
+
+
+
+.xp-progress-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 6vh;
+  margin: 0 auto;
+}
+
+.progress-bar-container{
+  width: 100%;
+  align-items: center;
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+
+}
+.progress-container {
+  width: 90%;
+  height: 70%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  transition: width 0.5s ease-in-out;
+}
+
+.xp-progress-min-max{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+#xp-min{
+  margin-left: 5%;
+  font-size: 0.4em;
+  font-weight:bold;
+  font-family: 'Montserrat';
+}
+
+#xp-max{
+  margin-right: 5%;
+  font-size: 0.4em;
+  font-weight:bold;
+  font-family: 'Montserrat';
+}
+
+#xp-text{
+  font-size: 1em;
+  margin: 0;
+  font-weight:bold;
+  font-family: 'Montserrat';
+}
+
+#liv-attuale{
+  font-size: 0.7em;
+  margin: 0;
+  font-weight:bold;
+  font-family: 'Montserrat';
+}
+
+#liv-successivo{
+  font-size: 0.7em;
+  margin: 0;
+  font-weight:bold;
+  font-family: 'Montserrat';
+}
+
+
