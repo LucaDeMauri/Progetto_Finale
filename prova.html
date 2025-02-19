@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effetto Scrittura</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .typing-effect {
+            font-size: 2rem;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid white; /* Cursore */
+            padding-right: 5px; /* Aggiungi un po' di spazio tra il testo e il cursore */
+            animation: typing 3s steps(30) 1s forwards, blink-caret 0.75s step-end infinite;
+        }
+
+        /* Effetto di scrittura */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Effetto del cursore che lampeggia */
+        @keyframes blink-caret {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="typing-effect">Ciao, questo è un effetto di scrittura!</div>
+</body>
+</html>
