@@ -3,10 +3,12 @@ e altezza del body, tanto da far comparire sia la sbarra di scorrimento vertical
 questo motivo ho decisono di non utilizzare il body come container principale ma di utilizzare invece un 
 div apposito che avrà il compito di contenere tutto il contenuto della pagina*/
 
+@import url('https://fonts.cdnfonts.com/css/apercu-pro');
+
+
 *::-webkit-scrollbar {
     display: none;  
   }
-
 
 
 body{
@@ -18,9 +20,10 @@ body{
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: #f0f0f0;
+  background-color: #fff0e6;
   box-sizing: border-box;
   overflow-x: auto;
+  font-family: 'Apercu Pro', sans-serif;
 
   
 }
@@ -61,35 +64,36 @@ body{
     margin-right: 10vw;
 }
 .step {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 70px;
-    min-height: 110px;
-    min-width: 110px;
-    border-radius: 50%;
-    background-color: black;
-    margin: 0;
-    box-shadow: 0px 10px 10px rgb(77, 77, 77);
-    cursor: pointer;
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 70px;
+  min-height: 110px;
+  min-width: 110px;
+  border-radius: 50%;
+  background-color: rgb(38, 38, 38);
+  margin: 0;
+  box-shadow: 5px 7px 0px rgb(59, 16, 230);
+  cursor: pointer;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
 }
-
 
 .step:hover {
-    background-color: red;
+  background-color: rgb(59, 16, 230);
+  box-shadow: 5px 10px 0px rgb(38, 38, 38);
+  transform: translateY(-5px);
 }
+
 
 
 
 .line {
     height: 20px;
     width: 300px;
-    background-color: black;
-    margin: -1px;
+    background-color: rgb(38, 38, 38);;
+    margin: -3px;
     min-width: 300px; 
-    box-shadow: 0px 10px 10px rgb(77, 77, 77);
 
 }
 

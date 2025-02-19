@@ -51,7 +51,6 @@ svg{
   align-items: center;
   justify-content: start;
   border: 1px solid #ccc;
-  background-color: #f4f4f4;
   flex-grow: 1;
   min-width: 20vw;
   overflow: auto;
@@ -62,6 +61,7 @@ svg{
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  background-color: #fff0e6 ;
   width: 90%;
 
 }
@@ -97,7 +97,7 @@ svg{
   background-color: rgb(206, 206, 206);
 }
 
-#left-panel { background-color: #ffffff; }
+#left-panel { background-color: #fff0e6; }
 #center-panel { background-color: rgb(255, 255, 255); }
 #right-panel { background-color: #ffffff; }
 

@@ -15,8 +15,15 @@ document.addEventListener('click', function(event) {
   
   if (event.target.classList.contains('step')) {
       // Cambia colore di sfondo dell'elemento cliccato
-      event.target.style.backgroundColor = 'lightgreen';
-      
+      event.target.style.transform = 'translateY(5px)';
+      event.target.style.boxShadow = '2px 3px 0px rgb(38, 38, 38)';
+      event.target.style.transition = 'transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out';
+
+      // Dopo 100ms torna alla posizione originale
+      setTimeout(() => {
+          event.target.style.transform = 'translateY(0)';
+          event.target.style.boxShadow = '5px 7px 0px rgb(38, 38, 38)';
+      }, 200);
       // Espandi il cerchio
       cerchio.style.width = '300vw';
       cerchio.style.height = '300vw';
