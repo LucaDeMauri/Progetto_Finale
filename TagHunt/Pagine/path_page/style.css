@@ -4,6 +4,8 @@ questo motivo ho decisono di non utilizzare il body come container principale ma
 div apposito che avrà il compito di contenere tutto il contenuto della pagina*/
 
 @import url('https://fonts.cdnfonts.com/css/apercu-pro');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 
 
 *::-webkit-scrollbar {
@@ -16,7 +18,6 @@ body{
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
@@ -24,7 +25,7 @@ body{
   box-sizing: border-box;
   overflow-x: auto;
   font-family: 'Apercu Pro', sans-serif;
-
+  
   
 }
 
@@ -41,7 +42,21 @@ body{
   z-index: 100;
 }
 
+nav{
+  display: flex;
+  align-items:center;
+  justify-content: end;
+  height: 25vh;
+  width: 100%;
+}
 
+
+.step-path-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
 
 .step-path {
   width: 100%;
@@ -49,7 +64,7 @@ body{
   display: flex;
   align-items: center;
   overflow-x: auto;
-  margin: 0 0 5vh 0;
+  margin: 1vh 0 1vh 0;
 
 
 }
@@ -63,6 +78,12 @@ body{
 .step-path .step:last-child{
     margin-right: 10vw;
 }
+
+.step-container{
+  display: flex;
+  flex-direction: column;
+}
+
 .step {
   display: flex;
   align-items: center;
@@ -94,6 +115,118 @@ body{
     background-color: rgb(38, 38, 38);;
     margin: -3px;
     min-width: 300px; 
+
+}
+
+
+
+
+
+
+
+
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes horizontal-move {
+  0% { transform: rotate(3deg)}
+  50% { transform: rotate(0);}
+  100% { transform: rotate(-3deg);}
+
+}
+
+.xp-progress-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 30vh;
+
+
+}
+
+.progress-bar-container{
+  width: 100%;
+  align-items: center;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+
+}
+.progress-container {
+  width: 70%;
+  height: 30%;
+  background-color: #e0e0e0;
+  box-shadow: 0px 2px 0px 4px black;
+  overflow: hidden;
+  animation: bounce 6s infinite alternate ease-in-out;
+
+
+}
+
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #49e426;
+  transition: width 0.5s ease-in-out;
+}
+
+.xp-progress-min-max{
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+#xp-min{
+  margin: 0 0 0 5%;
+  font-size: 30px;
+  font-weight:bold;
+  font-family: 'Roboto Mono';
+
+}
+
+#xp-max{
+  margin: 0 5% 0 0;
+  font-size: 30px;
+  font-weight:bold;
+  font-family: 'Roboto Mono';
+}
+
+#xp-text{
+  font-size: 25px;
+  margin: 0;
+  font-weight:bold;
+  font-family: 'Roboto Mono';
+  animation: bounce 2s infinite alternate ease-in-out;
+
+}
+
+#liv-attuale{
+  font-size: 25px;
+  margin: 0 10px 0 0;
+  font-weight:bold;
+  font-family: 'Roboto Mono';
+  animation: horizontal-move 2s infinite alternate ease-in-out;
+
+
+}
+
+#liv-successivo{
+  font-size: 25px;
+  margin: 0 0 0 10px;
+  font-weight:bold;
+  font-family: 'Roboto Mono';
+  animation: horizontal-move 1s infinite alternate ease-in-out;
+
 
 }
 
