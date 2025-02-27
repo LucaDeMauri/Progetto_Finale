@@ -29,7 +29,8 @@ require(['vs/editor/editor.main'], function () {
         
     });
 
-    // Inizializza il contenuto del risultato con il codice iniziale
+    /* Inizializza il contenuto del risultato con il codice iniziale, utile per i livelli successivi al primo
+       in quanto le sfide in quel caso non chiederanno di riscrivere tutto da capo. */
     updateResult(editor.getValue());
 });
 
@@ -66,12 +67,24 @@ function updateResult(code) {
 // Funzione per convalidare il codice HTML
 
 function validateCode(code) {
-   
+    try {
+        if (!code) {
+            throw new Error("Il codice è vuoto! Inserisci del codice prima di inviare.");
+        }
 
+        if (code.includes('<!DOCTYPE html>')) {
+            alert("Hai superato la sfida! ✅");
+        } else {
+            throw new Error("Il codice non contiene <!DOCTYPE html>. Riprova!");
+        }
+    } catch (error) {
+        alert(`Errore di validazione: ${error.message}`);
+    }
 }
 
 submit.addEventListener('click', function(){
-validateCode(code);
+    const code = editor.getValue();
+    validateCode(code);
 })
 
 

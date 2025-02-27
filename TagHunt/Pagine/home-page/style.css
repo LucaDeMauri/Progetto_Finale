@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/apercu-pro');
+
+
+body{
+    background-color: #fff0e6;
+    overflow-x: hidden ;
+    text-align: center;
+}
+
+#first-page-section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+nav{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 12vh;
+}
+
+#submit-button {
+    position: relative;
+    background-color: #7d5ef8; /*6950cd*/
+    color: white;
+    font-size: .8em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 1%;
+    width: 10%;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  #Title{
+    display: flex;
+    align-items: center;
+    color: rgb(59, 16, 230);
+    font-family: 'Roboto Mono', 'sans serif';
+    font-style: normal;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .10em solid rgb(66, 30, 247);
+    font-size: 200px;
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    text-shadow: 10px 10px 0 rgb(0, 0, 0);
+    animation: 
+    typing 4s steps(40, end), 
+    blink-caret .75s step-end infinite;
+    padding-bottom: 10vh;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 90% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(0, 0, 0) }
+  }
+
+
+  .tags {
+    width: 100%;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 2rem;
+    font-family: 'Roboto Mono';
+    opacity: 1;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding-bottom: 2vh;
+    mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(59, 16, 230) 45%, rgb(59, 16, 230) 100%); /* Maschera per nascondere sotto la scritta */
+}
+
+
+
+.tags_before div{
+    display: flex;
+    animation: scroll_before 160s linear infinite;
+}
+
+
+.tags_after div {
+    display: flex;
+    animation: scroll 160s linear infinite;
+}
+.tags span {
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+@keyframes scroll_before {
+    from {
+        transform: translateX(-50%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+    
+}
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+#second-page-section{
+    background-color: rgb(59, 16, 230);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+  
