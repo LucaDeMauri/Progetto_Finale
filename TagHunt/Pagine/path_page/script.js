@@ -41,6 +41,45 @@ document.addEventListener('click', function(event) {
       }
 })
 
+document.querySelectorAll(".step-container").forEach(step => {
+  step.addEventListener("mouseenter", function () {
+    let description = this.querySelector(".step-description"); 
+    if (description && description.classList.contains("step-description")) {
+      description.classList.remove("animate__fadeOutDown");
+      description.style.display = "block"; 
+      description.classList.add("animate__animated", "animate__fadeInUp"); 
+    }
+    let triangle = this.querySelector(".triangle");
+    if (triangle && triangle.classList.contains("triangle")) {
+      triangle.style.display = "block";
+      triangle.style.animation = "bouncePersonal 1s infinite alternate ease-in-out";
+    }
+    let tag = this.querySelector(".step-tag");
+    if (tag && tag.classList.contains("step-tag")) {
+      tag.classList.remove("animate__fadeOutUp");
+      tag.style.display = "block";
+      tag.classList.add("animate__animated", "animate__fadeInDown");
+    }
+  });
+
+  step.addEventListener("mouseleave", function () {
+    let description = this.querySelector(".step-description");
+    if (description && description.classList.contains("step-description")) {
+      description.classList.remove("animate__fadeInUp"); 
+      description.classList.add("animate__fadeOutDown"); 
+    }
+    let triangle = this.querySelector(".triangle");
+    if (triangle && triangle.classList.contains("triangle")) {
+      triangle.style.animation = "none";
+      triangle.style.display = "none";
+    }
+    let tag = this.querySelector(".step-tag");
+    if (tag && tag.classList.contains("step-tag")) {
+      tag.classList.remove("animate__fadeInDown");
+      tag.classList.add("animate__fadeOutUp");
+    } 
+  });
+});
 
 
 

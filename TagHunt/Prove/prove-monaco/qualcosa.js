@@ -1,8 +1,56 @@
 require.config({ paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs' } });
 
-
+let dati;
+let numerrori = 0;
+let id;
 let editor;  // Variabile per il Monaco Editor
+let startTime = performance.now(); // Inizia il conteggio del tempo
+let elapsedTime = 0;
+let tagName;
+let tagClose;
+let startCode;
+
+
 const submit = document.getElementById("invio-codice");
+
+document.addEventListener('DOMContentLoaded', function(){
+
+    const params = new URLSearchParams(window.location.search);
+    id = params.get('id');
+    id = id-1;
+    console.log(id);
+    
+
+    dati = localStorage.getItem('tappe');
+    dati = JSON.parse(dati);
+            console.log("Dati nel localStorage:", dati);
+
+    tagName = dati.tappe[id].tagScoperti[0];
+    console.log(tagName);
+    tagClose = "</"+tagName.replace(/<\/?([^>]+)>/, '$1')+">";
+    console.log(tagClose);
+
+    if (window.prettier){
+    startCode = prettier.format(dati.tappe[id].codice, { 
+        parser: 'html',
+        plugins: [prettierPlugins.html],
+        tabWidth: 4, // Indentazione di 4 spazi 
+    });
+}
+    else {
+        startCode = dati.tappe[id].codice; // Usa il codice così com'è
+    }
+
+
+    document.getElementsByClassName('title')[0].innerText = dati.tappe[id].titolo;
+    document.getElementById('descrizione').innerText = dati.tappe[id].descrizione;
+    document.getElementById('instructions-rows').innerText = dati.tappe[id].consegna;
+
+    
+
+
+    console.log(dati.tappe[id].titolo)
+})
 
 window.addEventListener('load', () => {
     // Dopo il caricamento della pagina, il cerchio si rimpicciolisce
@@ -15,9 +63,10 @@ window.addEventListener('load', () => {
     }, 200);
   });
 
+
 require(['vs/editor/editor.main'], function () {
     editor = monaco.editor.create(document.getElementById('editor'), {
-        value: "",
+        value: startCode,
         language: 'html',
         theme: 'vs-dark'
     });
@@ -72,11 +121,47 @@ function validateCode(code) {
             throw new Error("Il codice è vuoto! Inserisci del codice prima di inviare.");
         }
 
-        if (code.includes('<!DOCTYPE html>')) {
+        const bodyMatch = /<body[^>]*>(.*?)<\/body>/is.exec(code); // Cerca il contenuto del body
+        if (bodyMatch) {
+            const bodyContent = bodyMatch[1];  // Contenuto del body
+
+            // Usa una regex per cercare <h1>TagHunter</h1> dentro il body
+            const regex = new RegExp(`${tagName}(.*?)${tagClose}`, 'is');
+            const element = regex.exec(bodyContent)
+            const solutionMatch = regex.exec(dati.tappe[id].soluzione);
+            const solutionContent = solutionMatch[1];
+            console.log(tagName);
+
+            //se togliessi element dall'if quando l'h1 non si troverà nel body genererà un eccezzione
+            if (element && solutionContent && element[1].trim() === solutionContent.trim()){
             alert("Hai superato la sfida! ✅");
+            let endTime = performance.now(); // Prendi il tempo attuale
+            elapsedTime = ((endTime - startTime)/6000).toFixed(2); // Calcola il tempo trascorso
+            dati.tappe[id].tempo = elapsedTime;
+            localStorage.setItem('tappe', JSON.stringify(dati));
+            console.log(`Tempo trascorso: ${elapsedTime} secondi`);
+            updateXP(elapsedTime, numerrori);
         } else {
-            throw new Error("Il codice non contiene <!DOCTYPE html>. Riprova!");
+            console.log(element)
+            if(!code.includes(tagName)){
+                console.log("assicurati di creare il tag" + tagName)
+            }else{
+                if(!code.includes(tagClose)){
+                    console.log(`assicurati di chiudere il tag ${tagName} con il tag ${tagClose}`)}
+                else{ 
+                    if(element === null){
+                        console.log(`assicurati che il tag ${tagName} si trovi nel body`)}
+                else{                
+                    console.log(`assicurati di scrivere '${solutionContent}' nel tag ${tagName}`)
+                }
+            }
+            numerrori++;
+            dati.tappe[id].errori = numerrori;
+            localStorage.setItem('tappe', JSON.stringify(dati));
+            console.log(`Num errori: ${numerrori}`);
         }
+        }
+    }
     } catch (error) {
         alert(`Errore di validazione: ${error.message}`);
     }
@@ -168,7 +253,9 @@ function sleep(ms) {
   }
 
 
-async function updateXP(amount) {
+async function updateXP(time, errors) {
+
+  let amount = maxXp - (time * errors);
   xp += amount;
 
   if (xp > maxXp) {
@@ -207,20 +294,6 @@ async function updateXP(amount) {
 }
 
 // Esempio di utilizzo: incrementa l'XP
-updateXP(2000);  // Incrementa di 20 punti
-setTimeout(function() {
-  updateXP(5000);
-}, 3000);
-setTimeout(function() {
-    updateXP(5000);
-  }, 3000);
 
-  setTimeout(function() {
-    updateXP(5000);
-  }, 6000);
-
-  setTimeout(function() {
-    updateXP(5000);
-  }, 7000);
 
     

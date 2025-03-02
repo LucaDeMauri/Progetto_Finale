@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TagHunter-path</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs/editor/editor.main.css">
     <link rel="stylesheet" href="qualcosa.css">
     <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script>
 
 </head>
 <body>
+    <div id="cerchio"></div>
+
         <nav>
-        <div id="cerchio"></div>
         <svg width="130" height="40" xmlns="http://www.w3.org/2000/svg">
             <style>
                 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
@@ -60,30 +60,34 @@
             </div>
         </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs/loader.js"></script>
-        <script src="qualcosa.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function(){
+       <!-- Carica RequireJS e Monaco Editor -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs/loader.js"></script>
 
-                const params = new URLSearchParams(window.location.search);
-                let id = params.get('id');
-                console.log(id);
+<!-- Ora RequireJS è disponibile, possiamo configurarlo -->
+<script>
+    require.config({ paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs' } });
+</script>
 
-                let dati = localStorage.getItem('tappe');
-                dati = JSON.parse(dati);
-                        console.log("Dati nel localStorage:", dati);
-                        const tappa = dati.tappe[id-1];
-                console.log(tappa)
+<!-- Disattiva temporaneamente `define` per evitare conflitti con Prettier -->
+<script>
+    var defineBackup = window.define;
+    window.define = undefined;
+</script>
 
-                document.getElementsByClassName('title')[0].innerText = tappa.titolo;
-                document.getElementById('descrizione').innerText = tappa.descrizione;
-                document.getElementById('instructions-rows').innerText = tappa.consegna;
+<!-- Carica Prettier -->
+<script src="https://unpkg.com/prettier@2.8.8/standalone.js"></script>
+<script src="https://unpkg.com/prettier@2.8.8/parser-html.js"></script>
 
-                
+<!-- Ripristina `define` -->
+<script>
+    window.define = defineBackup;
+</script>
+
+<!-- Carica il tuo script principale -->
+<script src="qualcosa.js"></script>
 
 
-                console.log(tappa.titolo)
-            })
-        </script>
+
+        
 </body>
 </html>
