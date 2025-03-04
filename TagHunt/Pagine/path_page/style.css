@@ -50,27 +50,56 @@ nav{
   width: 100%;
 }
 
-#Title{
+.back-button {
   display: flex;
+  height: 30%;
+  width: 10%;
+  min-width: 50px;
+  max-width: 150px;
   align-items: center;
-  color: rgb(36, 36, 36);
-  font-family: 'Roboto Mono', 'sans serif';
-  font-size: 2.5vw;
-  font-style: normal;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
-  text-shadow: 2px 2px 0 rgb(33, 52, 201);
-  padding-bottom: 10vh;
-  margin-top: 8vh;
-  margin-left: 3vw;
-  margin-right: 3vw;
-}
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  color: rgb(0, 0, 0);
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #ededed;
+  box-shadow: 6px 6px 0 black;
+  margin-left: 2%;
+ }
+ 
+ .back-button > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+ }
+ 
+ .back-button:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+ }
+ 
+ .back-button:hover {
+  box-shadow: 2px 2px 0px #000000;
+  transform: translateY(-2px);
+ }
+
+ .back-button:active {
+  box-shadow: 0px 0px 0px #000000;
+  transform: translateY(2px);
+ }
+
 
 /* From Uiverse.io by alexruix */ 
 /* The switch - the box around the slider */
 .switch {
-  font-size: 17px;
   position: relative;
+  margin-top: 1%;
+  margin-left: 5% ;
+  font-size: 17px;
   display: inline-block;
   width: 3.5em;
   height: 2em;
@@ -275,8 +304,7 @@ input:checked + .slider:before {
 }
 
 .xp-progress-min-max{
-  display: flex;
-  visibility: hidden;
+  display: none;
   align-items: center;
   justify-content: space-between;
   width: 100%;
