@@ -5,135 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title>Document</title>
+    <title>steps-page</title>
 </head>
 <body>
+    <!-- Sezione per il cerchio interattivo -->
     <div id="cerchio"></div>
+
+    <!-- Barra di navigazione principale -->
     <nav>
-        <div class="xp-progress-container">
+        <h1 id="Title">&lt;TagHunter&gt;</h1>
+
+        <!-- Interruttore per la modalità grafica -->
+        <label title="clicca per cambiare modalità grafica" class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+
+        <!-- Contenitore delle statistiche -->
+        <section class="xp-progress-container">
             <p id="xp-text"></p> 
             <div class="progress-bar-container">
                 <p id="liv-attuale">1</p>
-                <div class="progress-container">
+                <div class="progress-container" id="progress-container" title="clicca per vedere le statistiche">
                     <div class="progress-bar" id="xp-bar"></div>
                 </div>
                 <p id="liv-successivo">2</p>
             </div>
             <div class="xp-progress-min-max">
                 <p id="xp-min">0xp</p>
-                <p id="xp-max">5000xp</p>
+                <p id="xp-max">1000xp</p>
             </div>
-        </div>
+        </section>
     </nav>
+
+    <!-- Icona account -->
     <div class="account-icon"></div>
     
-    <div class="step-path-container">
-        <div class="step-path">
-           
+    <!-- Contenitore del percorso dei passi -->
+    <main class="step-path-container">
+        <section class="step-path">
+            <!-- Ogni passo del percorso -->
+            <article class="step-container">
                 <div class="step">1</div>
-                
                 <p class="step-description">Descrizione del passo 1</p>
-            
+            </article>
             <div class="line"></div>
 
-            <div class="step-container">
+            <article class="step-container">
                 <p class="step-tag">&lt;p&gt;</p>
                 <svg  class="triangle" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
                     <polygon points="5,5 45,5 25,45" fill="rgb(38, 38, 38)" />
-                  </svg>             
+                </svg>             
                 <div class="step">2</div>
                 <p class="step-description">Descrizione del passo 2</p>
-            </div>
+            </article>
             <div class="line"></div>
 
-            <div class="step-container">
+            <article class="step-container">
                 <svg  class="triangle" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
                     <polygon points="5,5 45,5 25,45" fill="rgb(38, 38, 38)" />
-                  </svg>   
+                </svg>   
                 <div class="step">3</div>
                 <p class="step-description">Descrizione del passo 3</p>
-            </div>
+            </article>
             <div class="line"></div>
 
-            <div class="step-container">
+            <article class="step-container">
                 <svg  class="triangle" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
                     <polygon points="5,5 45,5 25,45" fill="rgb(38, 38, 38)" />
-                  </svg>   
+                </svg>   
                 <div class="step">4</div>
                 <p class="step-description">Descrizione del passo 4</p>
-            </div>
+            </article>
             <div class="line"></div>
 
-            <div class="step-container">
+            <article class="step-container">
                 <svg  class="triangle" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
                     <polygon points="5,5 45,5 25,45" fill="rgb(38, 38, 38)" />
-                  </svg>   
+                </svg>   
                 <div class="step">5</div>
                 <p class="step-description">Descrizione del passo 5</p>
-            </div>
+            </article>
             <div class="line"></div>
 
-            <div class="step-container">
+            <article class="step-container">
                 <svg  class="triangle" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
                     <polygon points="5,5 45,5 25,45" fill="rgb(38, 38, 38)" />
-                  </svg>   
+                </svg>   
                 <div class="step">6</div>
                 <p class="step-description">Descrizione del passo 6</p>
-            </div>
+            </article>
             <div class="line"></div>
 
-            <div class="step-container">
+            <article class="step-container">
                 <svg  class="triangle" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
                     <polygon points="5,5 45,5 25,45" fill="rgb(38, 38, 38)" />
-                  </svg>   
+                </svg>   
                 <div class="step">7</div>
                 <p class="step-description">Descrizione del passo 7</p>
-            </div>
+            </article>
             <div class="line"></div>
 
-            <div class="step-container">
+            <article class="step-container">
                 <svg  class="triangle" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
                     <polygon points="5,5 45,5 25,45" fill="rgb(38, 38, 38)" />
-                  </svg>   
+                </svg>   
                 <div class="step">8</div>
                 <p class="step-description">Descrizione del passo 8</p>
-            </div>
+            </article>
             <div class="line"></div>
 
-            <div class="step-container">
+            <article class="step-container">
                 <svg  class="triangle" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
                     <polygon points="5,5 45,5 25,45" fill="rgb(38, 38, 38)" />
-                  </svg>   
+                </svg>   
                 <div class="step">9</div>
                 <p class="step-description">Descrizione del passo 9</p>
-            </div>
+            </article>
             <div class="line"></div>
 
-            <div class="step-container">
+            <article class="step-container">
                 <svg  class="triangle" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
                     <polygon points="5,5 45,5 25,45" fill="rgb(38, 38, 38)" />
-                  </svg>   
+                </svg>   
                 <div class="step">10</div>
                 <p class="step-description">Descrizione del passo 10</p>
-            </div>
+            </article>
             <div class="line"></div>
 
-            <div class="step-container">
-                
+            <article class="step-container">
                 <svg  class="triangle" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
                     <polygon points="5,5 45,5 25,45" fill="rgb(38, 38, 38)" />
-                  </svg>   
+                </svg>   
                 <div class="step">11</div>
                 <p class="step-description">Descrizione del passo 11</p>
-            </div>
+            </article>
             <div class="line"></div>
 
-            <div class="step-container">
+            <article class="step-container">
                 <div class="step">12</div>
                 <p class="step-description">Descrizione del passo 12</p>
-            </div>
-        </div>
-    </div>
+            </article>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>

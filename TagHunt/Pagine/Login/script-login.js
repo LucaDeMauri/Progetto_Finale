@@ -3,6 +3,82 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
 
     let  email = document.getElementById("email").value;
     let  password = document.getElementById("password").value;
+    const userProgress = {
+        "xp": 0,
+        "id": 0,
+        "steps": [
+         {
+            "time": 0,
+            "errors": 0,
+            "completed": false,
+            "xp": 0,
+            "tag": '<h1>'
+        },
+        {
+            "time": 0,
+            "errors": 0,
+            "completed": false,
+            "xp": 0,
+            "tag": '<p>'
+        },
+        {
+            "time": 0,
+            "errors": 0,
+            "completed": false,
+            "xp": 0,
+
+        },
+        {
+            "time": 0,
+            "errors": 0,
+            "completed": false,
+            "xp": 0,
+
+        },
+        {
+            "time": 0,
+            "errors": 0,
+            "completed": false,
+            "xp": 0,
+
+        },
+        {
+            "time": 0,
+            "errors": 0,
+            "completed": false,
+            "xp": 0,
+
+        },
+        {
+            "time": 0,
+            "errors": 0,
+            "completed": false,
+            "xp": 0,
+
+        },
+        {
+            "time": 0,
+            "errors": 0,
+            "completed": false,
+            "xp": 0,
+
+        },
+        {
+            "time": 0,
+            "errors": 0,
+            "completed": false,
+            "xp": 0,
+
+        },
+        {
+            "time": 0,
+            "errors": 0,
+            "completed": false,
+            "xp": 0,
+
+        },
+    ]
+    }
 
     if (!email) {
         document.getElementById("message").style.color = "red";
@@ -26,7 +102,24 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
             document.getElementById("message").style.color = "green";
             document.getElementById("message").innerText = users[i].nome + " " + users[i].cognome;
             document.getElementById("benvenuto").innerText = "Benvenuto";
-            window.location.href="../path_page/prova.html"
+            let userid = users[i].id
+            let usersProgress = JSON.parse(localStorage.getItem('usersProgress')) || [];
+            if(usersProgress.length === 0){
+                userProgress.id = userid;
+                usersProgress.push(userProgress);
+            }
+            else{
+                for (let i = 0; i < usersProgress.length; i++) {
+                    if (usersProgress[i].id == userid) {
+                        userProgress.id = userid;
+                        break;
+                    }   
+            }
+            userProgress.id = userid;
+            usersProgress.push(userProgress);
+        }
+            localStorage.setItem('usersProgress', JSON.stringify(usersProgress));
+            window.location.href="../path_page/prova.html?userid=" + userid ;
             return;
         }
         else{

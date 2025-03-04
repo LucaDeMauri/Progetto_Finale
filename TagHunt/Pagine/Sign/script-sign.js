@@ -4,8 +4,8 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
 
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
-    let nome = document.getElementById("nome").value;
-    let cognome = document.getElementById("cognome").value;
+    let username = document.getElementById("username").value;
+    
 
     let messageDiv = document.getElementById("message");
 
@@ -20,16 +20,12 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
         document.getElementById("message").innerText = "Per favore, inserisci una password.";
         return;
     }
-    if (!nome) {
+    if (!username) {
         document.getElementById("message").style.color = "red";
-        document.getElementById("message").innerText = "Per favore, inserisci il tuo nome.";
+        document.getElementById("message").innerText = "Per favore, inserisci il tuo username.";
         return;
     }
-    if (!cognome) {
-        document.getElementById("message").style.color = "red";
-        document.getElementById("message").innerText = "Per favore, inserisci il tuo cognome.";
-        return;
-    }
+    
     
 
      // Hash della password usando SHA-256, per dare all'esercizio una parvenza di professionalità
@@ -39,8 +35,8 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
     //da notare che toString() restituisce un valore esadecimale solo nel caso di wordarray, nel resto dei casi restituisce una stringa normale
 
      const user = {
-         nome: nome,
-         cognome: cognome,
+         id: 0,
+         username: username,
          email: email,
          password: passwordHashata,  
      };
@@ -55,7 +51,8 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
             return
         }
     }
-
+    
+    user.id = users.length + 1;
      // a questo punto aggiungo il nuovo utente all'array users, che non è altro che un array di utenti e quindi di oggetti
      users.push(user);
 

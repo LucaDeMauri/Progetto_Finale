@@ -1,6 +1,6 @@
-var xp = 0;
+var xp = 4500;
 let minXp = 0;
-let maxXp = 5000;
+let maxXp = 1000;
 const xpBar = document.getElementById('xp-bar');
 const xpText = document.getElementById('xp-text');
 const xpMin = document.getElementById('xp-min');
@@ -20,8 +20,9 @@ function sleep(ms) {
 async function updateXP(amount) {
   xp += amount;
 
+  do{
   if (xp > maxXp) {
-    xpPercentage = (xp / maxXp) * 100;
+    xpPercentage = (xp - minXp) / 10;
     // Aggiorna la barra di progresso e il testo
         xpBar.style.width = `${xpPercentage}%`;
         xpText.textContent = `${xp}xp`;
@@ -32,44 +33,56 @@ async function updateXP(amount) {
     await sleep(500)
     minXp = maxXp;
     xpMin.textContent =  `${minXp}xp`
-    maxXp += 5000;
+    maxXp += 1000;
     xpMax.textContent =  `${maxXp}xp`
     livAttuale += 1;
     livSuccessivo = livAttuale + 1;  
     liv1.textContent = `${livAttuale}`;
     liv2.textContent = `${livSuccessivo}`;  
-    xpPercentage = (xp / maxXp) * 100;
-        xpBar.style.background = "#4caf50" ;
+    xpPercentage = (xp - minXp) / 10;
+        xpBar.style.background = "#49e426" ;
         xpBar.style.width = `${xpPercentage}%`;
-        xpText.textContent = `${xp}xp`;
-  }
-  else{
-    xpPercentage = (xp / maxXp) * 100;
-    // Aggiorna la barra di progresso e il testo
-    xpBar.style.width = `${xpPercentage}%`;
-    xpText.textContent = `${xp}xp`;
-  }
+        xpText.textContent = `${xp}xp`;}
+        else{
+          xpPercentage = (xp - minXp)/10;
+          // Aggiorna la barra di progresso e il testo
+          xpBar.style.width = `${xpPercentage}%`;
+          xpText.textContent = `${xp}xp`;
+        }}
+  while(xp > maxXp)
   
-
-  
-
 }
 
-// Esempio di utilizzo: incrementa l'XP
-updateXP(2000);  // Incrementa di 20 punti
-setTimeout(function() {
-  updateXP(5000);
-}, 3000);
-setTimeout(function() {
-    updateXP(5000);
-  }, 3000);
+async function showXP() {
+  while(true){
+    if (xp > maxXp) {
+      console.log(xp);
+      console.log(minXp);
+      console.log(maxXp);
+      console.log(livAttuale);
+      console.log(livSuccessivo);
+      xpPercentage = (xp - minXp) / 10;
+      minXp = maxXp;
+      maxXp += 1000;
+      livAttuale += 1;
+      livSuccessivo = livAttuale + 1;  
+      xpPercentage = (xp - minXp) / 10;
+    }
+    else{
+      console.log(xp);
+      xpPercentage = (xp - minXp)/10;
+      xpMin.textContent =  `${minXp}xp`
+      xpMax.textContent =  `${maxXp}xp`
+      liv1.textContent = `${livAttuale}`;
+      liv2.textContent = `${livSuccessivo}`;  
+      xpBar.style.background = "#49e426" ;
+      xpBar.style.width = `${xpPercentage}%`;
+      xpText.textContent = `${xp}xp`;
+      break;
+    }}
+   
+}
 
-  setTimeout(function() {
-    updateXP(5000);
-  }, 6000);
-
-  setTimeout(function() {
-    updateXP(5000);
-  }, 7000);
-
+updateXP(100);
+//showXP();
     

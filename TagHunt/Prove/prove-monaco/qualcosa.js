@@ -1,7 +1,9 @@
 require.config({ paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs' } });
 
 let dati;
+let userData;
 let numerrori = 0;
+let userid;
 let id;
 let editor;  // Variabile per il Monaco Editor
 let startTime = performance.now(); // Inizia il conteggio del tempo
@@ -10,22 +12,45 @@ let tagName;
 let tagClose;
 let startCode;
 
-
+let xp = 0;
+let minXp = 0;
+let maxXp = 1000;
+const xpBar = document.getElementById('xp-bar');
+const xpText = document.getElementById('xp-text');
+const xpMin = document.getElementById('xp-min');
+minXp = parseInt(xpMin.textContent, 10);
+const xpMax = document.getElementById('xp-max');
+maxXp = parseInt(xpMax.textContent, 10);
+let liv1 = document.getElementById('liv-attuale');
+let livAttuale = parseInt(liv1.textContent, 10);
+let liv2 = document.getElementById('liv-successivo');
+let livSuccessivo = parseInt(liv2.textContent, 10);
 const submit = document.getElementById("invio-codice");
+
 
 document.addEventListener('DOMContentLoaded', function(){
 
     const params = new URLSearchParams(window.location.search);
     id = params.get('id');
-    id = id-1;
+    userid = params.get('userid');
+    id = id-1;//id della tappa
+    userid = userid-1;//id dell'utente
     console.log(id);
+    console.log(userid);
     
 
     dati = localStorage.getItem('tappe');
     dati = JSON.parse(dati);
             console.log("Dati nel localStorage:", dati);
 
-    tagName = dati.tappe[id].tagScoperti[0];
+    userData = localStorage.getItem('usersProgress');
+    userData = JSON.parse(userData);
+
+    xp = userData[userid].xp;
+    showXP();
+
+
+    tagName = userData[userid].steps[id].tag;
     console.log(tagName);
     tagClose = "</"+tagName.replace(/<\/?([^>]+)>/, '$1')+">";
     console.log(tagClose);
@@ -137,10 +162,17 @@ function validateCode(code) {
             alert("Hai superato la sfida! ✅");
             let endTime = performance.now(); // Prendi il tempo attuale
             elapsedTime = ((endTime - startTime)/6000).toFixed(2); // Calcola il tempo trascorso
-            dati.tappe[id].tempo = elapsedTime;
-            localStorage.setItem('tappe', JSON.stringify(dati));
+            userData[userid].steps[id].time = elapsedTime;
+            userData[userid].steps[id].completed = true;
+            console.log(userData[userid]);
+            localStorage.setItem('usersProgress', JSON.stringify(userData));
             console.log(`Tempo trascorso: ${elapsedTime} secondi`);
-            updateXP(elapsedTime, numerrori);
+            amount = 5000 -  (elapsedTime) * 100;
+            if(!numerrori == 0){
+                amount = amount - (elapsedTime * numerrori) * 100
+            }
+            console.log(amount);
+            updateXP(amount);
         } else {
             console.log(element)
             if(!code.includes(tagName)){
@@ -156,8 +188,8 @@ function validateCode(code) {
                 }
             }
             numerrori++;
-            dati.tappe[id].errori = numerrori;
-            localStorage.setItem('tappe', JSON.stringify(dati));
+            userData[userid].steps[id].errors = numerrori;
+            localStorage.setItem('usersProgress', JSON.stringify(userData));
             console.log(`Num errori: ${numerrori}`);
         }
         }
@@ -234,32 +266,23 @@ makeResizable(
 
 
 
-let xp = 0;
-let minXp = 0;
-let maxXp = 5000;
-const xpBar = document.getElementById('xp-bar');
-const xpText = document.getElementById('xp-text');
-const xpMin = document.getElementById('xp-min');
-minXp = parseInt(xpMin.textContent, 10);
-const xpMax = document.getElementById('xp-max');
-maxXp = parseInt(xpMax.textContent, 10);
-let liv1 = document.getElementById('liv-attuale');
-let livAttuale = parseInt(liv1.textContent, 10);
-let liv2 = document.getElementById('liv-successivo');
-let livSuccessivo = parseInt(liv2.textContent, 10);
+
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
 
-async function updateXP(time, errors) {
-
-  let amount = maxXp - (time * errors);
+async function updateXP(amount) {
   xp += amount;
+  userData[userid].xp = xp;
+  userData[userid].steps[id].xp = amount;
 
+  localStorage.setItem('usersProgress', JSON.stringify(userData));
+
+  do{
   if (xp > maxXp) {
-    xpPercentage = (xp / maxXp) * 100;
+    xpPercentage = (xp - minXp) / 10;
     // Aggiorna la barra di progresso e il testo
         xpBar.style.width = `${xpPercentage}%`;
         xpText.textContent = `${xp}xp`;
@@ -270,30 +293,55 @@ async function updateXP(time, errors) {
     await sleep(500)
     minXp = maxXp;
     xpMin.textContent =  `${minXp}xp`
-    maxXp += 5000;
+    maxXp += 1000;
     xpMax.textContent =  `${maxXp}xp`
     livAttuale += 1;
     livSuccessivo = livAttuale + 1;  
     liv1.textContent = `${livAttuale}`;
     liv2.textContent = `${livSuccessivo}`;  
-    xpPercentage = (xp / maxXp) * 100;
-        xpBar.style.background = "#4caf50" ;
+    xpPercentage = (xp - minXp) / 10;
+        xpBar.style.background = "#49e426" ;
         xpBar.style.width = `${xpPercentage}%`;
-        xpText.textContent = `${xp}xp`;
-  }
-  else{
-    xpPercentage = (xp / maxXp) * 100;
-    // Aggiorna la barra di progresso e il testo
-    xpBar.style.width = `${xpPercentage}%`;
-    xpText.textContent = `${xp}xp`;
-  }
+        xpText.textContent = `${xp}xp`;}
+        else{
+          xpPercentage = (xp - minXp)/10;
+          // Aggiorna la barra di progresso e il testo
+          xpBar.style.width = `${xpPercentage}%`;
+          xpText.textContent = `${xp}xp`;
+        }}
+  while(xp > maxXp)
   
-
-  
-
 }
 
-// Esempio di utilizzo: incrementa l'XP
+
+async function showXP() {
+    while(true){
+      if (xp > maxXp) {
+        console.log(minXp);
+        console.log(maxXp);
+        console.log(livAttuale);
+        console.log(livSuccessivo);
+        xpPercentage = (xp - minXp) / 10;
+        minXp = maxXp;
+        maxXp += 1000;
+        livAttuale += 1;
+        livSuccessivo = livAttuale + 1;  
+        xpPercentage = (xp - minXp) / 10;
+      }
+      else{
+        xpPercentage = (xp - minXp)/10;
+        xpMin.textContent =  `${minXp}xp`
+        xpMax.textContent =  `${maxXp}xp`
+        liv1.textContent = `${livAttuale}`;
+        liv2.textContent = `${livSuccessivo}`;  
+        xpBar.style.background = "#49e426" ;
+        xpBar.style.width = `${xpPercentage}%`;
+        xpText.textContent = `${xp}xp`;
+        break;
+      }}
+     
+  }
+
 
 
     

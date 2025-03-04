@@ -1,6 +1,7 @@
 const tagsContainers = document.querySelectorAll(".tagsContent");
 const tagsContainersBefore = document.querySelectorAll(".tagsContentBefore");
-
+//#5432de;
+//#fff0e6
 // Lista completa dei 110 tag HTML
 const tags = [
     "&lt;!DOCTYPE html&gt;", "&lt;a&gt;", "&lt;abbr&gt;", "&lt;address&gt;", "&lt;area&gt;", "&lt;article&gt;", "&lt;aside&gt;", "&lt;audio&gt;", "&lt;b&gt;", "&lt;base&gt;",
