@@ -3,48 +3,53 @@
 
 :root {
     --colore-principale: #fff0e6 ; 
-    --colore-secondario: #5432de ; 
+    --colore-secondario: #3056e1 ;
+    --colore-terziario: #ff6f61; 
 }
+
+*::-webkit-scrollbar {
+    display: none;  
+  }
 
 body{
     background-color:var(--colore-principale) ;
-    overflow-x: hidden ;
-    text-align: center;
+    overflow-x:hidden;
     margin: 0;
     padding: 0;
 }
+
+#cerchio {
+  width: 300vw;
+  height: 300vh;
+  background-color: black;
+  top: -100vh;
+  left: -100vw;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 2.3s ease;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
+  }
 
 #first-page-section{
     height: 100vh;
     width: 100vw;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     overflow-x: hidden;
+    z-index: 0;
 }
 
-nav{
-    height: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-bottom: 12vh;
-}
 
-#submit-button {
-    position: relative;
-    background-color: #7d5ef8; /*6950cd*/
-    color: white;
-    font-size: .8em;
-    font-weight: 500;
-    letter-spacing: 1px;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 1%;
-    width: 10%;
-    cursor: pointer;
-    overflow: hidden;
-  }
+
+  
   
   #Title{
     display: flex;
@@ -53,20 +58,45 @@ nav{
     font-family: 'Roboto Mono', 'sans serif';
     font-style: normal;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .10em solid rgb(66, 30, 247);
-    font-size: 200px;
+    border-right: 10px solid rgb(66, 30, 247);
+    font-size: calc(10vw + 1.5em);
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    text-shadow: 10px 10px 0 rgb(0, 0, 0);
+    text-shadow: 0.5vw 0.5vw 0 rgb(0, 0, 0);
     animation: 
-    typing 4s steps(40, end), 
+    typing 3s steps(40, end), 
     blink-caret .75s step-end infinite;
-    padding-bottom: 10vh;
+    padding-bottom: 7vh;
+  }
+
+  .start-button{
+    background-color: var(--colore-terziario);
+    visibility: hidden;
+    width: 13%;
+    height: 9%;
+    box-shadow: 0.5vw 0.5vw 0 rgb(0, 0, 0);   
+    border: black solid 2px; 
+    z-index: 1;
+    cursor: pointer;
+    font-family: 'Roboto Mono';
+    font-size: 1em;
+    font-weight: bold;
+
   }
   
+  .start-button:hover {
+    box-shadow: 0.2vw 0.2vw 0px #000000;
+    transform: translateY(-2px);
+   }
+  
+   .start-button:active {
+    box-shadow: 0px 0px 0px #000000;
+    transform: translateY(2px);
+   }
+ 
   @keyframes typing {
     from { width: 0 }
-    to { width: 90% }
+    to { width: 78% }
   }
   
   /* The typewriter cursor effect */
@@ -87,7 +117,7 @@ nav{
     z-index: 1;
     display: flex;
     align-items: center;
-    padding-bottom: 2vh;
+    padding-bottom: 1vw;
     mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(59, 16, 230) 45%, rgb(59, 16, 230) 100%); /* Maschera per nascondere sotto la scritta */
 }
 
@@ -95,12 +125,14 @@ nav{
 
 .tags_before div{
     display: flex;
+    font-size: calc(1vw + 0.5em);
     animation: scroll_before 160s linear infinite;
 }
 
 
 .tags_after div {
     display: flex;
+    font-size: calc(1vw + 0.5em);
     animation: scroll 160s linear infinite;
 }
 .tags span {
@@ -132,6 +164,239 @@ nav{
     width: 100vw;
     display: flex;
     flex-direction: column;
+    overflow-x:hidden;
     
 }
   
+#second-page-section h1{
+    color: var(--colore-principale);
+    font-family: 'apercu pro';
+    font-size: calc(5vw + 1em); 
+    text-shadow: 0.5vw 0.1vw 0 rgb(0, 0, 0);
+
+}
+
+#second-page-section p{
+    color: var(--colore-principale);
+    font-family: 'Roboto Mono';
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+
+.step-path-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .step-path {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    margin: 1vh 0 1vh 0;
+  
+  
+  }
+  
+  .step-tag{
+    display: none;
+    position: absolute;
+    font-size: 90px;
+    font-style: italic;
+    color: rgb(38, 38, 38);
+    top: -270px;
+  }
+  
+  .triangle{
+    display: none;
+    position: absolute;
+    top: -60px;
+  }
+  .step-description{
+    display: none;
+    position: absolute;
+    top: 120px;
+    white-space: nowrap;
+  }
+  
+  
+  .step-path > .step:first-child {
+    margin-left: 14vw;
+  }
+  .step-path .step:last-child{
+      margin-right: 10vw;
+  }
+  
+  .step-container{
+    position: relative;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 70px;
+    min-height: 110px;
+    min-width: 110px;
+    border-radius: 50%;
+    background-color: rgb(38, 38, 38);
+    margin: 0;
+    box-shadow: 5px 7px 0px rgb(59, 16, 230);
+    cursor: pointer;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+  }
+  
+  .step:hover {
+    background-color: rgb(59, 16, 230);
+    box-shadow: 5px 10px 0px rgb(38, 38, 38);
+    transform: translateY(-5px);
+  }
+  
+  .step:hover  + .step-description {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  
+  .line {
+      height: 20px;
+      width: 317px;
+      background-color: rgb(38, 38, 38);;
+      margin: -3px;
+      min-width: 317px; 
+  
+  }
+  
+  
+  
+  
+  
+  
+
+#third-page-section{
+    background-color: var(--colore-principale) ;
+    height: 140vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    
+}
+
+#third-page-section :last-child{
+    justify-content: end;
+}
+  
+#third-page-section h1{
+    color: var(--colore-terziario);
+    font-family: 'apercu pro';
+    font-size: calc(5vw + 1em); 
+    text-shadow: 0.5vw 0.1vw 0 rgb(0, 0, 0);
+
+    
+}
+
+#third-page-section p{
+    color: var(--colore-terziario);
+    font-family: 'Roboto Mono';
+
+}
+
+.container {
+    display: flex;
+    height:  65vh;
+    width: 35vw;
+    margin-right: 10%;
+  }
+  
+  .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border: 2px solid #000000;
+    flex-grow: 1;
+    min-width: 20vw;
+    overflow: auto;
+  }
+  
+  .instructions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: #fff0e6 ;
+    width: 90%;
+  
+  }
+  
+  .title{
+    margin-top: 4vh;
+    width: 75%;
+    height: 5vh;
+    background-color: rgb(206, 206, 206);
+    border: solid black 1px;
+  }
+  
+  #descrizione{
+    margin-top: 5vh;
+    word-wrap: break-word;
+  }
+  
+  #instructions-rows{
+    margin-top: 5vh;
+    word-wrap: break-word;
+  }
+  
+  .submit-button{
+    margin-top: 4vh;
+    width: 30%;
+    height: 5vh;
+    background-color: rgb(236, 236, 236);
+    border: solid black 1px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover{
+    background-color: rgb(206, 206, 206);
+  }
+  
+  #left-panel { background-color: #fff0e6; }
+  #center-panel { background-color: rgb(255, 255, 255); }
+  #right-panel { background-color: #ffffff; }
+  
+  .resizer {
+    min-width: 10px;
+    background-color: #ccc;
+    cursor: ew-resize;
+    height: 100%;
+  }
+  
+  #editor, #result {
+    height: 100%;
+    width: 100%;
+  }
+
+  .content-container{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .Sign-up-container{
+    margin-top: 10vh;
+    position: relative;
+    height: 30vh;
+    background-color: #000000;
+    z-index: 6;
+  }

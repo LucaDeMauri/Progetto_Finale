@@ -50,14 +50,31 @@ document.addEventListener('DOMContentLoaded', function(){
     } else {
         xp = 0;  // Imposta un valore predefinito
     }
-  document.querySelectorAll('.step').forEach(step => {
-    id = step.textContent;
-    if(userData[userid].steps[id-1].completed == true){
-      step.style.backgroundColor = '#5de040';
-      step.style.boxShadow = '5px 7px 0px rgb(38, 38, 38)';
-    };
+
+
+    document.querySelectorAll('.step').forEach(step => {
+      id = step.textContent;
+      stepContainer = step.parentElement;
+      console.log(stepContainer)
+      if(userData[userid].steps[id-1].completed == true){
+        step.style.backgroundColor = '#5de040';
+        step.style.boxShadow = '5px 7px 0px rgb(38, 38, 38)';
+        stepContainer.querySelector('.step-tag').style.fontFamily = 'apercu pro';
+        stepContainer.querySelector('.step-tag').style.fontStyle = 'italic';
+        stepContainer.querySelector('.step-tag').textContent = userData[userid].steps[id-1].tag;
+      }
+    })
   })
-})
+
+
+  let tempuserid = userid + 1
+  document.getElementById("back-button").addEventListener("click", function() {
+      cerchio.style.width = '300vw';
+      cerchio.style.height = '300vw';
+      setTimeout(() => {
+    window.location.href = "../home-page/index.html?userid=" + tempuserid;
+      },3000)
+});
 
 const xpbar = document.getElementById('progress-container');
 xpbar.addEventListener('click', function(event) {
@@ -82,7 +99,7 @@ xpbar.addEventListener('click', function(event) {
     let params = new URLSearchParams(window.location.search);
     
     // Reindirizza alla nuova pagina mantenendo tutti i parametri
-    window.location.href = `../../Pagine/account-page/index.html?${params.toString()}`;
+    window.location.href = `../account-page/index.html?${params.toString()}`;
   }, 2000);
 })
 
@@ -117,7 +134,7 @@ document.addEventListener('click', function(event) {
         params.set('id', targetText);
         
         // Reindirizza alla nuova pagina mantenendo tutti i parametri
-        window.location.href = `../../Prove/prove-monaco/qualcosa.html?${params.toString()}`;
+        window.location.href = `../ide_page/index.html?${params.toString()}`;
       }, 2000);
 
       }
@@ -169,11 +186,6 @@ document.querySelectorAll(".step").forEach(step => {
 async function showXP() {
   while(true){
     if (xp > maxXp) {
-      console.log(xp);
-      console.log(minXp);
-      console.log(maxXp);
-      console.log(livAttuale);
-      console.log(livSuccessivo);
       xpPercentage = (xp - minXp) / 10;
       minXp = maxXp;
       maxXp += 1000;

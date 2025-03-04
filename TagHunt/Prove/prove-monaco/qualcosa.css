@@ -1,3 +1,10 @@
+@import url('https://fonts.cdnfonts.com/css/apercu-pro');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -30,14 +37,57 @@ body {
 
 nav{
   display: flex;
-  height: 15vh;
-  align-items: center;
-  justify-content:space-between;
+  align-items:center;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100%;
 }
 
-svg{
-  margin-left: 20px;
-}
+
+.back-button {
+  display: flex;
+  height: 50%;
+  width: 16%;
+  border: #000000 solid 1px;
+  min-width: 100px;
+  max-width: 150px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  font-size: large;
+  font-family: 'apercu pro';
+  color: rgb(0, 0, 0);
+  transition: all 0.2s linear;
+  cursor: pointer;
+  background-color: #ededed;
+  box-shadow: 6px 6px 0 black;
+  margin-left: 2%;
+  margin-top: 2%;
+ }
+ 
+ .back-button > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+ }
+ 
+ .back-button:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+ }
+ 
+ .back-button:hover {
+  box-shadow: 2px 2px 0px #000000;
+  transform: translateY(-2px);
+ }
+
+ .back-button:active {
+  box-shadow: 0px 0px 0px #000000;
+  transform: translateY(2px);
+ }
+
 
 .container {
   display: flex;
@@ -138,6 +188,7 @@ svg{
   justify-content: center;
   width: 30%;
   height: 30vh;
+  margin-top: 5%;
   color: rgb(38, 38, 38);
 
 

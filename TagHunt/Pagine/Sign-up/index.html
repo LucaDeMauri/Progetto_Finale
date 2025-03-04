@@ -3,15 +3,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
-    <link rel="stylesheet" href="Style-Login.css">
+    <link rel="stylesheet" href="Style-Sign.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="cerchio"></div>
+
     <form class="form_main" id="signupForm" >
-        <p class="heading">Login</p>
+        <p class="heading">Sign Up</p>
 
         <div class="inputContainer">
             <input placeholder="Email" id="email" name="email" class="inputField" type="email" required>
+        </div>
+
+        <div class="inputContainer">
+            <input placeholder="username" id="username" name="username" class="inputField" type="text" required>
         </div>
         
         <div class="inputContainer">
@@ -19,18 +25,19 @@
             <p id="mostra">Mostra</p>
         </div>
 
-        <h1 id="benvenuto"></h1>
+        
+        
         <div id="message" style="color: red; font-weight: bold;"></div>
                   
         <button id="submit-button" type="submit">Submit</button>
         
         <div class="signupContainer">
-            <p>non hai un account?</p>
-            <a href="../Sign/sign.html">Sign Up</a>
+            <p>hai un account?</p>
+            <a href="../Login/index.html">Login</a>
         </div>
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="script-login.js"></script>
+    <script src="script-sign.js"></script>
 </body>
 </html>

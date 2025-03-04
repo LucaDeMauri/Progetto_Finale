@@ -1,54 +1,86 @@
-const tagsContainers = document.querySelectorAll(".tagsContent");
-const tagsContainersBefore = document.querySelectorAll(".tagsContentBefore");
-//#5432de;
-//#fff0e6
-// Lista completa dei 110 tag HTML
-const tags = [
-    "&lt;!DOCTYPE html&gt;", "&lt;a&gt;", "&lt;abbr&gt;", "&lt;address&gt;", "&lt;area&gt;", "&lt;article&gt;", "&lt;aside&gt;", "&lt;audio&gt;", "&lt;b&gt;", "&lt;base&gt;",
-    "&lt;bdi&gt;", "&lt;bdo&gt;", "&lt;blockquote&gt;", "&lt;body&gt;", "&lt;br&gt;", "&lt;button&gt;", "&lt;canvas&gt;", "&lt;caption&gt;", "&lt;cite&gt;", "&lt;code&gt;",
-    "&lt;col&gt;", "&lt;colgroup&gt;", "&lt;data&gt;", "&lt;datalist&gt;", "&lt;dd&gt;", "&lt;del&gt;", "&lt;details&gt;", "&lt;dfn&gt;", "&lt;dialog&gt;", "&lt;div&gt;",
-    "&lt;dl&gt;", "&lt;dt&gt;", "&lt;em&gt;", "&lt;embed&gt;", "&lt;fieldset&gt;", "&lt;figcaption&gt;", "&lt;figure&gt;", "&lt;footer&gt;", "&lt;form&gt;", "&lt;h1&gt;",
-    "&lt;h2&gt;", "&lt;h3&gt;", "&lt;h4&gt;", "&lt;h5&gt;", "&lt;h6&gt;", "&lt;head&gt;", "&lt;header&gt;", "&lt;hgroup&gt;", "&lt;hr&gt;", "&lt;html&gt;",
-    "&lt;i&gt;", "&lt;iframe&gt;", "&lt;img&gt;", "&lt;input&gt;", "&lt;ins&gt;", "&lt;kbd&gt;", "&lt;label&gt;", "&lt;legend&gt;", "&lt;li&gt;", "&lt;link&gt;",
-    "&lt;main&gt;", "&lt;map&gt;", "&lt;mark&gt;", "&lt;meta&gt;", "&lt;meter&gt;", "&lt;nav&gt;", "&lt;noscript&gt;", "&lt;object&gt;", "&lt;ol&gt;", "&lt;optgroup&gt;",
-    "&lt;option&gt;", "&lt;output&gt;", "&lt;p&gt;", "&lt;param&gt;", "&lt;picture&gt;", "&lt;pre&gt;", "&lt;progress&gt;", "&lt;q&gt;", "&lt;rp&gt;", "&lt;rt&gt;",
-    "&lt;ruby&gt;", "&lt;s&gt;", "&lt;samp&gt;", "&lt;script&gt;", "&lt;section&gt;", "&lt;select&gt;", "&lt;small&gt;", "&lt;source&gt;", "&lt;span&gt;", "&lt;strong&gt;",
-    "&lt;style&gt;", "&lt;sub&gt;", "&lt;summary&gt;", "&lt;sup&gt;", "&lt;svg&gt;", "&lt;table&gt;", "&lt;tbody&gt;", "&lt;td&gt;", "&lt;template&gt;", "&lt;textarea&gt;",
-    "&lt;tfoot&gt;", "&lt;th&gt;", "&lt;thead&gt;", "&lt;time&gt;", "&lt;title&gt;", "&lt;tr&gt;", "&lt;track&gt;", "&lt;u&gt;", "&lt;ul&gt;", "&lt;var&gt;",
-    "&lt;video&gt;", "&lt;wbr&gt;"
-];
+require.config({ paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs' } });
 
-// Calcola quanti tag per ogni riga (equilibrato per evitare ripetizioni)
-const totalRows = tagsContainers.length + tagsContainersBefore.length;
-const tagsPerRow = Math.ceil(tags.length / totalRows);
+ cerchio = document.getElementById('cerchio');
 
-function generateTags() {
-    let shuffledTags = [...tags]; // Cloniamo l'array per mescolare
-    let index = 0;
+let button = document.getElementById("start-button");
 
-    // Popoliamo i container AFTER (scorrono a sinistra)
-    tagsContainers.forEach((container) => {
-        let tagString = "";
-        for (let i = 0; i < tagsPerRow; i++) {
-            if (index < shuffledTags.length) {
-                tagString += `<span>${shuffledTags[index]}</span>`;
-                index++;
-            }
-        }
-        container.innerHTML = tagString + tagString; // Duplichiamo per l'animazione fluida
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        button.style.visibility = "visible";
+        button.className += " animate__animated animate__zoomIn";
+    }, 3000);});
+
+    require(['vs/editor/editor.main'], function () {
+        editor = monaco.editor.create(document.getElementById('editor'), {
+            value: `<DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        <h1>TagHunter</h1>
+    </body>
+</html>`,
+            language: 'html',
+            theme: 'vs-dark'
+        });
+        
+        editor.onDidChangeModelContent(function () {
+            const code = editor.getValue();
+            updateResult(code);
+            
+        });
+    
+        
+        updateResult(editor.getValue());
+
+    setTimeout(() => {
+      cerchio.style.width = '100px';
+      cerchio.style.height = '100px';
+      cerchio.style.left = '-2000px';
+      cerchio.style.top = '-1000px';
+    }, 100);
     });
 
-    // Popoliamo i container BEFORE (scorrono a destra)
-    tagsContainersBefore.forEach((container) => {
-        let tagString = "";
-        for (let i = 0; i < tagsPerRow; i++) {
-            if (index < shuffledTags.length) {
-                tagString += `<span>${shuffledTags[index]}</span>`;
-                index++;
-            }
-        }
-        container.innerHTML = tagString + tagString; // Duplichiamo per l'animazione fluida
-    });
-}
 
-generateTags();
+    function updateResult(code) {
+        const resultDiv = document.getElementById('result');
+        let shadowRoot = resultDiv.shadowRoot;
+    
+        // Se il Shadow DOM non esiste, crealo
+        if (!shadowRoot) {
+            shadowRoot = resultDiv.attachShadow({ mode: 'open' });
+        }
+    
+        // Estrai gli stili dal codice utente
+        const styleMatches = code.match(/<style[^>]*>([\s\S]*?)<\/style>/gi) || [];
+        const styles = styleMatches.map(styleTag => styleTag.replace(/<\/?style[^>]*>/gi, '')).join('\n');
+        
+        const htmlWithoutStyles = code.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '');
+    
+        // Inserisci HTML e CSS nel Shadow DOM
+        shadowRoot.innerHTML = `
+            <style>
+                body {
+                    font-family: 'sans-serif';
+                    padding: 10px;
+                    background-color:rgb(192, 169, 153);
+                }
+                ${styles}  /* Applichiamo gli stili dinamici */
+            </style>
+            ${htmlWithoutStyles}
+        `;
+    }
+
+
+    
+        button.addEventListener("click", function() {
+
+            cerchio.style.width = '300vw';
+            cerchio.style.height = '300vh';
+          
+      
+        setTimeout(() => {
+          window.location.href = `../Sign-up/index.html?`;
+        }, 2000);
+      });
+

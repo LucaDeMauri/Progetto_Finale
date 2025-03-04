@@ -100,7 +100,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
     for (let i = 0; i < users.length; i++) {
         if (users[i].email === email && users[i].password === passwordHashata) {
             document.getElementById("message").style.color = "green";
-            document.getElementById("message").innerText = users[i].nome + " " + users[i].cognome;
+            document.getElementById("message").innerText = users[i].username;
             document.getElementById("benvenuto").innerText = "Benvenuto";
             let userid = users[i].id
             let usersProgress = JSON.parse(localStorage.getItem('usersProgress')) || [];
@@ -118,9 +118,12 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
             userProgress.id = userid;
             usersProgress.push(userProgress);
         }
+
+        setTimeout(() => {
             localStorage.setItem('usersProgress', JSON.stringify(usersProgress));
-            window.location.href="../path_page/prova.html?userid=" + userid ;
+            window.location.href="../path_page/index.html?userid=" + userid ;
             return;
+        },1000)
         }
         else{
             document.getElementById("message").style.color = "red";

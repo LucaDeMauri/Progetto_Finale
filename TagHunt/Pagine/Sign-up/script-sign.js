@@ -1,4 +1,16 @@
 
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(() => {
+        cerchio.style.width = '100px';
+        cerchio.style.height = '100px';
+        cerchio.style.left = '-2000px';
+        cerchio.style.top = '-1000px';
+      }, 100);
+})
+
+
+
+
 document.getElementById("signupForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -28,7 +40,6 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
     
     
 
-     // Hash della password usando SHA-256, per dare all'esercizio una parvenza di professionalità
      const passwordHashata = CryptoJS.SHA256(password).toString();//CryprtoJS restituisce un oggetto wordarray
                                                                   // utilizzando il metodo .toString, invece, lo converto in un valore esadecimale
 

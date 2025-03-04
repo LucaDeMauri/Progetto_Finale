@@ -4,45 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <title>Document</title>
 </head>
 <body>
-    <section id="first-page-section">
-        
-        <div class="tags tags_after">
-            <div class="tagsContent"></div>
-        </div>
-        <div class="tags tags_before">
-            <div class="tagsContentBefore"></div>
-        </div>
-        <div class="tags tags_after">
-            <div class="tagsContent"></div>
-        </div>
-        <div class="tags tags_before">
-            <div class="tagsContentBefore"></div>
-        </div>
+    <div id="cerchio"></div>
+
+    <section class="sticky" id="first-page-section">
+       
         <h1 id="Title">&lt;TagHunter&gt;</h1>
-        <div class="tags tags_after">
-            <div class="tagsContent"></div>
-        </div>
-        <div class="tags tags_before">
-            <div class="tagsContentBefore"></div>
-        </div>
-        <div class="tags tags_after">
-            <div class="tagsContent"></div>
-        </div>
-        <div class="tags tags_before">
-            <div class="tagsContentBefore"></div>
-        </div>
-   
+        <button id="start-button" class="start-button ">INIZIA ORA</button>
+        
     </section>
-    <section id="second-page-section">
+    <section class="sticky" id="second-page-section">
+        <h1>IMPARA A PROGRAMMARE</h1>
+        <p>TagHunter è l'applicazione che ti guida nell'apprendimento di HTML attraverso editor live e un sistema di progresso. <br>Completa esercizi, sblocca nuove sfide e svela tutti i tag! <br> Imparando rapidamente i fondamenti del web development! </p>
+        <main class="step-path-container">
+            <section class="step-path">
+
+                    <div class="step"></div>
+                    <div class="line"></div>
+    
+                                    
+                    <div class="step"></div>
+                    <div class="line"></div>
+    
+                
+                    <div class="step"></div>
+                    <div class="line"></div>
+                    <div class="step"></div>
+
+                
+
+    
+               
+            </section>
+        </main>
+    </section>
+    <section  class="sticky" id="third-page-section">
         <div class="tags tags_after" style="color: #fff0e6">
             <div class="tagsContent"></div>
         </div>
-        <h1>IMPARA A PROGRAMMARE</h1>
-    </section>
+        <h1>COME FUNZIONA?</h1>
 
-    <script src="script.js"></script>
+        <div class="content-container">
+            <div class="container">
+            
+                <div class="panel" id="center-panel">
+                    <div id="editor"></div>
+                </div>
+                <div class="panel" id="right-panel">
+                    <div id="result"></div> 
+                </div>
+            </div>
+        </div>
+        <div class="Sign-up-container">
+            <button id="start-button" class="start-button ">INIZIA ORA</button>
+        </div>
+    </section>
+    
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs/loader.js"></script>
+
+<script>
+    require.config({ paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs' } });
+</script>
+
+<script src="script.js"></script>
+
 </body>
 </html>

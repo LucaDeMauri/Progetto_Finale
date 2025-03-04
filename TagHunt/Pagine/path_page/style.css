@@ -46,28 +46,31 @@ nav{
   display: flex;
   align-items:center;
   justify-content: space-between;
-  height: 25vh;
+  height: 20vh;
   width: 100%;
 }
 
+
 .back-button {
   display: flex;
-  height: 30%;
-  width: 10%;
-  min-width: 50px;
+  height: 25%;
+  width: 8%;
+  border: #000000 solid 1px;
+  min-width: 100px;
   max-width: 150px;
   align-items: center;
   justify-content: center;
-  background-color: #eeeeee4b;
   border-radius: 3px;
   letter-spacing: 1px;
+  font-size: large;
+  font-family: 'apercu pro';
   color: rgb(0, 0, 0);
   transition: all 0.2s linear;
   cursor: pointer;
-  border: none;
-  background: #ededed;
+  background-color: #ededed;
   box-shadow: 6px 6px 0 black;
   margin-left: 2%;
+  margin-bottom: 1%;
  }
  
  .back-button > svg {
@@ -172,7 +175,7 @@ input:checked + .slider:before {
   display: none;
   position: absolute;
   font-size: 90px;
-  font-style: italic;
+  font-family: 'Roboto Mono', 'sans serif';
   color: rgb(38, 38, 38);
   top: -270px;
 }
@@ -190,10 +193,10 @@ input:checked + .slider:before {
 }
 
 
-.step-path > .step:first-child {
+.step-path > .step-container:first-child {
   margin-left: 10vw;
 }
-.step-path .step:last-child{
+.step-path .step-container:last-child{
     margin-right: 10vw;
 }
 
@@ -219,6 +222,12 @@ input:checked + .slider:before {
   box-shadow: 5px 7px 0px rgb(59, 16, 230);
   cursor: pointer;
   transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+.statistics-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .step:hover {

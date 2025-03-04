@@ -77,6 +77,15 @@ document.addEventListener('DOMContentLoaded', function(){
     console.log(dati.tappe[id].titolo)
 })
 
+let tempuserid = userid + 1
+  document.getElementById("back-button").addEventListener("click", function() {
+      cerchio.style.width = '300vw';
+      cerchio.style.height = '300vw';
+      setTimeout(() => {
+    window.location.href = "../path_page/index.html?userid=" + tempuserid;
+      },3000)
+});
+
 window.addEventListener('load', () => {
     // Dopo il caricamento della pagina, il cerchio si rimpicciolisce
     const cerchio = document.getElementById('cerchio');

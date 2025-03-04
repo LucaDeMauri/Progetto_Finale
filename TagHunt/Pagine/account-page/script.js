@@ -46,7 +46,7 @@ window.addEventListener('load', () => {
       cerchio.style.width = '300vw';
       cerchio.style.height = '300vw';
       setTimeout(() => {
-    window.location.href = "../path_page/prova.html?userid=" + tempuserid;
+    window.location.href = "../path_page/index.html?userid=" + tempuserid;
       },3000)
 });
 
