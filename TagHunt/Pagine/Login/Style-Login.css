@@ -104,6 +104,10 @@ body {
     overflow: hidden;
   }
   
+  #message{
+    color: red; 
+    font-weight: bold;
+  }
   
   .signupContainer {
     margin: 0;

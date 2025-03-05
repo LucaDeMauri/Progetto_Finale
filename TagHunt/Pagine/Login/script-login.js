@@ -26,6 +26,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
             "errors": 0,
             "completed": false,
             "xp": 0,
+            "tag": '<a>'
 
         },
         {
@@ -33,6 +34,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
             "errors": 0,
             "completed": false,
             "xp": 0,
+            "tag": '<img>'
 
         },
         {
@@ -40,6 +42,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
             "errors": 0,
             "completed": false,
             "xp": 0,
+            "tag": '<ul>'
 
         },
         {
@@ -47,6 +50,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
             "errors": 0,
             "completed": false,
             "xp": 0,
+            "tag": '<li>'
 
         },
         {
@@ -54,6 +58,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
             "errors": 0,
             "completed": false,
             "xp": 0,
+            "tag": '<form>'
 
         },
         {
@@ -61,6 +66,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
             "errors": 0,
             "completed": false,
             "xp": 0,
+            "tag": '<fieldset>'
 
         },
         {
@@ -68,6 +74,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
             "errors": 0,
             "completed": false,
             "xp": 0,
+            "tag": '<legend>'
 
         },
         {
@@ -75,6 +82,15 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
             "errors": 0,
             "completed": false,
             "xp": 0,
+            "tag": '<input>'
+
+        },
+        {
+            "time": 0,
+            "errors": 0,
+            "completed": false,
+            "xp": 0,
+            "tag": '<button>'
 
         },
     ]

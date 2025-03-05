@@ -73,7 +73,7 @@ body {
   }
 
   #mostra:hover{
-    color: red;
+    color: #5432de;
   }
   
   .inputIcon {
@@ -122,6 +122,10 @@ body {
     overflow: hidden;
   }
   
+  #message{
+    color: red; 
+    font-weight: bold;
+  }
   
   .signupContainer {
     margin: 0;

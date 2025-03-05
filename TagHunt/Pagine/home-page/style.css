@@ -242,13 +242,13 @@ body{
     border-radius: 50%;
     background-color: rgb(38, 38, 38);
     margin: 0;
-    box-shadow: 5px 7px 0px rgb(59, 16, 230);
+    box-shadow: 5px 7px 0px rgb(240, 244, 9);
     cursor: pointer;
     transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
   }
   
   .step:hover {
-    background-color: rgb(59, 16, 230);
+    background-color: rgb(245, 237, 15);
     box-shadow: 5px 10px 0px rgb(38, 38, 38);
     transform: translateY(-5px);
   }
@@ -281,7 +281,7 @@ body{
     display: flex;
     flex-direction: column;
     z-index: 10;
-    padding-bottom: 10vh ;
+    padding-bottom: 15vh ;
     
 }
 
@@ -295,6 +295,7 @@ body{
     font-size: calc(5vw + 1em); 
     text-shadow: 0.5vw 0.1vw 0 rgb(0, 0, 0);
     margin-left: 2%;
+    margin-bottom: 0;
 
     
 }
@@ -441,6 +442,10 @@ body{
     .content-container{
       flex-direction: column;
       
+    }
+
+    #third-page-section ul span{
+      font-size: 30px;
     }
   
     .container{

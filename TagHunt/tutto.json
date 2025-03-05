@@ -3,22 +3,106 @@
   {
     "id": 1,
     "codice": "<!DOCTYPE html> <html> <head> </head> <body> </body> </html>",
-    "titolo": "Tappa 1: Impara a dichiarare un file HTML",
+    "titolo": "Tappa 1: Impara a creare un'intestazione",
     "descrizione": "Gli elementi HTML hanno tag di apertura come <h1>; e tag di chiusura come </h1>;. Il testo che un elemento visualizzerà nella pagina è il contenuto che si trova tra i suoi tag di apertura e chiusura.\n\nQuando hai finito, premi il pulsante 'Invia codice' per vedere se è corretto.",
     "consegna": "Apri e chiudi il tag <h1> all'interno del body, e scrivi al suo interno 'TagHunter'",
-    "soluzione": [ "<h1>TagHunter</h1>"
-    ]
+    "soluzione": [ "<h1>TagHunter</h1>"]
     
   },
-      {
-        "id": 2,
-        "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> </body> </html>",
-        "titolo": "Tappa 2: Impara a dichiarare un file HTML",
-        "descrizione": "Il tag <p> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
-        "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
-        "soluzione": [ "<p>scopri tutti i tag</p>" ]
-        
-      }
-    ]
+  {
+    "id": 2,
+    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> </body> </html>",
+    "titolo": "Tappa 2: Impara a creare un paragrafo",
+    "descrizione": "Il tag <p> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
+    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
+    "soluzione": [ "<p>scopri tutti i tag</p>" ]
+    
+  },
+  {
+    "id": 3,
+    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> </body> </html>",
+    "titolo": "Tappa 3: Impara a dichiarare un link ipertestuale",
+    "descrizione": "Il tag <p> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
+    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
+    "soluzione": [ "<a href='prova'>prova</a>" ]
+    
+  },
+  {
+    "id": 4,
+    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> </body> </html>",
+    "titolo": "Tappa 4: Impara a inserire un immagine",
+    "descrizione": "Il tag <img> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
+    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
+    "soluzione": [ "<p>scopri tutti i tag</p>" ]
+    
+  },
+  {
+    "id": 5,
+    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> </body> </html>",
+    "titolo": "Tappa 5: Impara a creare un elenco non ordinato",
+    "descrizione": "Il tag <ul> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
+    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
+    "soluzione": [ "<p>scopri tutti i tag</p>" ]
+    
+  },
+  {
+    "id": 6,
+    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul></ul> </body> </html>",
+    "titolo": "Tappa 6: Impara a dichiarare l'elemento di un elenco",
+    "descrizione": "Il tag <li> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
+    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
+    "soluzione": [ "<p>scopri tutti i tag</p>" ]
+    
+  },
+  {
+    "id": 7,
+    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> </body> </html>",
+    "titolo": "Tappa 7: Impara a creare un form",
+    "descrizione": "Il tag <form> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
+    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
+    "soluzione": [ "<p>scopri tutti i tag</p>" ]
+    
+  },
+  {
+    "id": 8,
+    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form></form> </body> </html>",
+    "titolo": "Tappa 8: che cosa è un fieldset",
+    "descrizione": "Il tag <fieldset> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
+    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
+    "soluzione": [ "<p>scopri tutti i tag</p>" ]
+    
+  },
+  {
+    "id": 9,
+    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form> <fieldset></fieldset> </form> </body> </html>",
+    "titolo": "Tappa 9: Impara a creare una legend",
+    "descrizione": "Il tag <legend> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
+    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
+    "soluzione": [ "<p>scopri tutti i tag</p>" ]
+    
+  },
+  {
+    "id": 10,
+    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form> <fieldset> <input></input> </fieldset> </form> </body> </html>",
+    "titolo": "Tappa 10: Impara a richiedere dati",
+    "descrizione": "Il tag <input> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
+    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
+    "soluzione": [ "<p>scopri tutti i tag</p>" ]
+    
+  },
+  {
+    "id": 11,
+    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form> <fieldset> <input></input> </fieldset> </form> </body> </html>",
+    "titolo": "Tappa 11: Impara a inviare dati",
+    "descrizione": "Il tag <button> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
+    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
+    "soluzione": [ "<p>scopri tutti i tag</p>" ]
+    
+  }
+  
+  
+
+
+]
   }
   
