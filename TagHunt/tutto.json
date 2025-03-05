@@ -4,8 +4,8 @@
     "id": 1,
     "codice": "<!DOCTYPE html> <html> <head> </head> <body> </body> </html>",
     "titolo": "Tappa 1: Impara a dichiarare un file HTML",
-    "descrizione": "HTML elements have opening tags like <h1>; and closing tags like </h1>;. The text an element will display goes between its opening and closing tags.\n\nChange the text of the h1 element below from Hello World to CatPhotoApp and watch the change in the browser preview.\n\nWhen you are done, press the Check Your Code button to see if it's correct.",
-    "consegna": "Scrivi il tag <!DOCTYPE html> all'inizio del tuo file.",
+    "descrizione": "Gli elementi HTML hanno tag di apertura come <h1>; e tag di chiusura come </h1>;. Il testo che un elemento visualizzerà nella pagina è il contenuto che si trova tra i suoi tag di apertura e chiusura.\n\nQuando hai finito, premi il pulsante 'Invia codice' per vedere se è corretto.",
+    "consegna": "Apri e chiudi il tag <h1> all'interno del body, e scrivi al suo interno 'TagHunter'",
     "soluzione": [ "<h1>TagHunter</h1>"
     ]
     
@@ -14,12 +14,8 @@
         "id": 2,
         "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> </body> </html>",
         "titolo": "Tappa 2: Impara a dichiarare un file HTML",
-        "descrizione": [
-          "Prima di iniziare a scrivere bellissime pagine HTML,",
-          "bisogna dichiarare al browser che il file che gli stiamo passando è una pagina HTML.",
-          "Per questo motivo si utilizza il tag <!DOCTYPE html>, il fondamento di ogni sito esistente."
-        ],
-        "consegna": "Scrivi il tag <!DOCTYPE html> all'inizio del tuo file.",
+        "descrizione": "Il tag <p> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
+        "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
         "soluzione": [ "<p>scopri tutti i tag</p>" ]
         
       }

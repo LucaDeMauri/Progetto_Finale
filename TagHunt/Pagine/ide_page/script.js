@@ -26,6 +26,7 @@ let livAttuale = parseInt(liv1.textContent, 10);
 let liv2 = document.getElementById('liv-successivo');
 let livSuccessivo = parseInt(liv2.textContent, 10);
 const submit = document.getElementById("invio-codice");
+const reset = document.getElementById("invio-reset")
 
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -212,11 +213,15 @@ function validateCode(code) {
     }
 }
 
+reset.addEventListener('click', function(){
+    editor.setValue(startCode);  
+});
+
+
 submit.addEventListener('click', function(){
     const code = editor.getValue();
     validateCode(code);
 })
-
 
 
 

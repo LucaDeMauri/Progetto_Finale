@@ -21,6 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: 'Roboto Mono';
 }
 
 #cerchio {
@@ -90,8 +91,8 @@ nav{
 
 
 .container {
+  height: 85% ;
   display: flex;
-  height: 85vh;
   width: 100%;
 }
 
@@ -104,6 +105,7 @@ nav{
   flex-grow: 1;
   min-width: 20vw;
   overflow: auto;
+  font-family: 'apercu pro';
 }
 
 .instructions{
@@ -275,4 +277,27 @@ nav{
 }
 
 
+@media screen and (max-width: 700px) {
 
+  *::-webkit-scrollbar {
+    display: auto;  
+  }
+  .container{
+    flex-direction: column;
+    height: 90%;
+  }
+
+  .resizer{
+    display: none;
+  }
+
+  .panel{
+    min-width: 40vw;
+    min-height: 50vw;
+  }
+
+  #left-panel{
+    padding-bottom: 5vh;
+  }
+  
+}

@@ -1,8 +1,10 @@
 require.config({ paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs' } });
 
- cerchio = document.getElementById('cerchio');
+const cerchio = document.getElementById('cerchio');
 
-let button = document.getElementById("start-button");
+const button = document.getElementById("start-button");
+
+const signUpButton = document.getElementById('Sign-up-button')
 
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
@@ -71,8 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
     }
 
-
-    
         button.addEventListener("click", function() {
 
             cerchio.style.width = '300vw';
@@ -83,4 +83,17 @@ document.addEventListener("DOMContentLoaded", function() {
           window.location.href = `../Sign-up/index.html?`;
         }, 2000);
       });
+      
+      
 
+      signUpButton.addEventListener('click', function(){
+
+        cerchio.style.width = '300vw';
+        cerchio.style.height = '300vh';
+          
+      
+        setTimeout(() => {
+          window.location.href = `../Sign-up/index.html?`;
+        }, 2000);
+
+      })
