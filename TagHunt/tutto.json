@@ -51,7 +51,7 @@
     "titolo": "Tappa 6: Impara a dichiarare l'elemento di un elenco",
     "descrizione": "Il tag <li> in HTML viene utilizzato per definire un elemento di una lista. Deve essere sempre contenuto all'interno di un elenco, come <ul> per liste non ordinate o <ol> per liste ordinate.",
     "consegna": "Aggiungi tre elementi <li> all'interno del tag <ul>.",
-    "soluzione": [ "<ul> <li>Elemento 1</li> <li>Elemento 2</li> <li>Elemento 3</li> </ul>" ]
+    "soluzione": [ "<li>Elemento 1</li> <li>Elemento 2</li> <li>Elemento 3</li>" ]
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "titolo": "Tappa 8: Che cos'è un fieldset",
     "descrizione": "Il tag <fieldset> in HTML viene utilizzato per raggruppare logicamente elementi di un modulo, migliorandone la struttura e l'accessibilità.",
     "consegna": "Inserisci un <fieldset> all'interno del tag <form>.",
-    "soluzione": [ "<form> <fieldset></fieldset> </form>" ]
+    "soluzione": [ "<fieldset></fieldset>" ]
   },
   {
     "id": 9,
@@ -75,7 +75,7 @@
     "titolo": "Tappa 9: Impara a creare una legend",
     "descrizione": "Il tag <legend> in HTML viene utilizzato all'interno di un <fieldset> per fornire una descrizione del gruppo di campi.",
     "consegna": "Aggiungi un tag <legend> all'interno di <fieldset> e scrivi 'Informazioni utente'.",
-    "soluzione": [ "<fieldset> <legend>Informazioni utente</legend> </fieldset>" ]
+    "soluzione": [ "<legend>che ne pensi di TagHunter</legend>" ]
   },
   {
     "id": 10,
@@ -83,7 +83,7 @@
     "titolo": "Tappa 10: Impara a richiedere dati",
     "descrizione": "Il tag <input> in HTML viene utilizzato per creare campi di inserimento dati in un modulo, come campi di testo, checkbox o pulsanti radio.",
     "consegna": "Aggiungi un campo di input di tipo 'text' all'interno di <fieldset>.",
-    "soluzione": [ "<fieldset> <legend>Informazioni utente</legend> <input type='text' placeholder='Inserisci il tuo nome'> </fieldset>" ]
+    "soluzione": [ "<input type='text' placeholder='Inserisci il tuo nome'>" ]
   },
   {
     "id": 11,
@@ -91,7 +91,7 @@
     "titolo": "Tappa 11: Impara a inviare dati",
     "descrizione": "Il tag <button> in HTML viene utilizzato per creare pulsanti interattivi, come quelli per l'invio di moduli.",
     "consegna": "Aggiungi un pulsante <button> con il testo 'Invia' all'interno di <fieldset>.",
-    "soluzione": [ "<fieldset> <legend>Informazioni utente</legend> <input type='text' placeholder='Inserisci il tuo nome'> <button type='submit'>Invia</button> </fieldset>" ]
+    "soluzione": [ "<button type='submit'>Invia</button>" ]
   }
   
   
