@@ -22,8 +22,8 @@
     "id": 3,
     "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> </body> </html>",
     "titolo": "Tappa 3: Impara a dichiarare un link ipertestuale",
-    "descrizione": "Il tag <p> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
-    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
+    "descrizione": "Il tag <a> in HTML viene utilizzato per creare collegamenti ipertestuali (link). Permette di collegare altre pagine web, documenti, indirizzi email o sezioni specifiche della stessa pagina.\n\nLa chiave sta nell'attributo href='' il cui contenuto rappresenta il link al quale si vuole andare",
+    "consegna": "inserisci il tag <a> e assegnagli il valore ",
     "soluzione": [ "<a href='prova'>prova</a>" ]
     
   },
@@ -31,73 +31,67 @@
     "id": 4,
     "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> </body> </html>",
     "titolo": "Tappa 4: Impara a inserire un immagine",
-    "descrizione": "Il tag <img> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
-    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
-    "soluzione": [ "<p>scopri tutti i tag</p>" ]
+    "descrizione": "Il tag <img> in HTML viene utilizzato per incorporare immagini in una pagina web. È un elemento autochiuso, quindi non ha un tag di chiusura. Potremmo dire quindi che il suo valore è rappresentato dall'uttibuto src='' il cui valore specifica l'indirizzo dell'immagine che si vuole inserire ",
+    "consegna": "inserisci il tag <img> e assegna all'attributo src='' il link https://imgur.com/GmfBYJX.jpg",
+    "soluzione": [ "<img src='https://imgur.com/GmfBYJX.jpg'>" ]
     
   },
   {
     "id": 5,
     "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> </body> </html>",
     "titolo": "Tappa 5: Impara a creare un elenco non ordinato",
-    "descrizione": "Il tag <ul> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
-    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
-    "soluzione": [ "<p>scopri tutti i tag</p>" ]
+    "descrizione": "Il tag <ul> in HTML viene utilizzato per creare elenchi non ordinati, in cui gli elementi sono preceduti da punti (bullet points) invece che da numeri o lettere.",
+    "consegna": "inserisci il tag <ul>",
+    "soluzione": [ "<ul></ul>" ]
     
   },
   {
     "id": 6,
     "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul></ul> </body> </html>",
     "titolo": "Tappa 6: Impara a dichiarare l'elemento di un elenco",
-    "descrizione": "Il tag <li> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
-    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
-    "soluzione": [ "<p>scopri tutti i tag</p>" ]
-    
+    "descrizione": "Il tag <li> in HTML viene utilizzato per definire un elemento di una lista. Deve essere sempre contenuto all'interno di un elenco, come <ul> per liste non ordinate o <ol> per liste ordinate.",
+    "consegna": "Aggiungi tre elementi <li> all'interno del tag <ul>.",
+    "soluzione": [ "<ul> <li>Elemento 1</li> <li>Elemento 2</li> <li>Elemento 3</li> </ul>" ]
   },
   {
     "id": 7,
     "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> </body> </html>",
     "titolo": "Tappa 7: Impara a creare un form",
-    "descrizione": "Il tag <form> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
-    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
-    "soluzione": [ "<p>scopri tutti i tag</p>" ]
-    
+    "descrizione": "Il tag <form> in HTML viene utilizzato per creare moduli interattivi che permettono agli utenti di inserire e inviare dati.",
+    "consegna": "Aggiungi un tag <form> sotto la lista <ul>.",
+    "soluzione": [ "<form></form>" ]
   },
   {
     "id": 8,
     "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form></form> </body> </html>",
-    "titolo": "Tappa 8: che cosa è un fieldset",
-    "descrizione": "Il tag <fieldset> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
-    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
-    "soluzione": [ "<p>scopri tutti i tag</p>" ]
-    
+    "titolo": "Tappa 8: Che cos'è un fieldset",
+    "descrizione": "Il tag <fieldset> in HTML viene utilizzato per raggruppare logicamente elementi di un modulo, migliorandone la struttura e l'accessibilità.",
+    "consegna": "Inserisci un <fieldset> all'interno del tag <form>.",
+    "soluzione": [ "<form> <fieldset></fieldset> </form>" ]
   },
   {
     "id": 9,
     "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form> <fieldset></fieldset> </form> </body> </html>",
     "titolo": "Tappa 9: Impara a creare una legend",
-    "descrizione": "Il tag <legend> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
-    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
-    "soluzione": [ "<p>scopri tutti i tag</p>" ]
-    
+    "descrizione": "Il tag <legend> in HTML viene utilizzato all'interno di un <fieldset> per fornire una descrizione del gruppo di campi.",
+    "consegna": "Aggiungi un tag <legend> all'interno di <fieldset> e scrivi 'Informazioni utente'.",
+    "soluzione": [ "<fieldset> <legend>Informazioni utente</legend> </fieldset>" ]
   },
   {
     "id": 10,
-    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form> <fieldset> <input></input> </fieldset> </form> </body> </html>",
+    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form> <fieldset> <legend>Informazioni utente</legend> </fieldset> </form> </body> </html>",
     "titolo": "Tappa 10: Impara a richiedere dati",
-    "descrizione": "Il tag <input> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
-    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
-    "soluzione": [ "<p>scopri tutti i tag</p>" ]
-    
+    "descrizione": "Il tag <input> in HTML viene utilizzato per creare campi di inserimento dati in un modulo, come campi di testo, checkbox o pulsanti radio.",
+    "consegna": "Aggiungi un campo di input di tipo 'text' all'interno di <fieldset>.",
+    "soluzione": [ "<fieldset> <legend>Informazioni utente</legend> <input type='text' placeholder='Inserisci il tuo nome'> </fieldset>" ]
   },
   {
     "id": 11,
-    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form> <fieldset> <input></input> </fieldset> </form> </body> </html>",
+    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form> <fieldset> <legend>Informazioni utente</legend> <input type='text' placeholder='Inserisci il tuo nome'> </fieldset> </form> </body> </html>",
     "titolo": "Tappa 11: Impara a inviare dati",
-    "descrizione": "Il tag <button> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
-    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
-    "soluzione": [ "<p>scopri tutti i tag</p>" ]
-    
+    "descrizione": "Il tag <button> in HTML viene utilizzato per creare pulsanti interattivi, come quelli per l'invio di moduli.",
+    "consegna": "Aggiungi un pulsante <button> con il testo 'Invia' all'interno di <fieldset>.",
+    "soluzione": [ "<fieldset> <legend>Informazioni utente</legend> <input type='text' placeholder='Inserisci il tuo nome'> <button type='submit'>Invia</button> </fieldset>" ]
   }
   
   
