@@ -1,19 +1,11 @@
-/* inizialmente ho dato a body height 100vh e width 100vw ma questo ha portato a un eccessiva larghezza
-e altezza del body, tanto da far comparire sia la sbarra di scorrimento verticale e orizzantale, per
-questo motivo ho decisono di non utilizzare il body come container principale ma di utilizzare invece un 
-div apposito che avrà il compito di contenere tutto il contenuto della pagina*/
-
-@import url('https://fonts.cdnfonts.com/css/apercu-pro');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-
+@import url("https://fonts.cdnfonts.com/css/apercu-pro");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 *::-webkit-scrollbar {
-    display: none;  
-  }
+  display: none;
+}
 
-
-body{
+body {
   margin: 0;
   padding: 0;
   display: flex;
@@ -24,9 +16,7 @@ body{
   background-color: #fff0e6;
   box-sizing: border-box;
   overflow-x: auto;
-  font-family: 'Apercu Pro', sans-serif;
-  
-  
+  font-family: "Apercu Pro", sans-serif;
 }
 
 #cerchio {
@@ -42,18 +32,17 @@ body{
   z-index: 100;
 }
 
-nav{
+nav {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
   height: 20vh;
   width: 100%;
 }
 
-
 .back-button {
   display: flex;
-  height: 25%;
+  height: 30%;
   width: 8%;
   border: #000000 solid 1px;
   min-width: 100px;
@@ -63,7 +52,7 @@ nav{
   border-radius: 3px;
   letter-spacing: 1px;
   font-size: large;
-  font-family: 'apercu pro';
+  font-family: "apercu pro";
   color: rgb(0, 0, 0);
   transition: all 0.2s linear;
   cursor: pointer;
@@ -71,88 +60,33 @@ nav{
   box-shadow: 6px 6px 0 black;
   margin-left: 2%;
   margin-bottom: 1%;
- }
- 
- .back-button > svg {
+}
+
+.back-button > svg {
   margin-right: 5px;
   margin-left: 5px;
   font-size: 20px;
   transition: all 0.4s ease-in;
- }
- 
- .back-button:hover > svg {
+}
+
+.back-button:hover > svg {
   font-size: 1.2em;
   transform: translateX(-5px);
- }
- 
- .back-button:hover {
+}
+
+.back-button:hover {
   box-shadow: 2px 2px 0px #000000;
   transform: translateY(-2px);
- }
+}
 
- .back-button:active {
+.back-button:active {
   box-shadow: 0px 0px 0px #000000;
   transform: translateY(2px);
- }
-
-
-/* From Uiverse.io by alexruix */ 
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  margin-top: 1%;
-  margin-left: 5% ;
-  font-size: 17px;
-  display: inline-block;
-  width: 3.5em;
-  height: 2em;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  --background: #28096b;
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--background);
-  transition: .5s;
-  border-radius: 30px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 1.4em;
-  width: 1.4em;
-  border-radius: 50%;
-  left: 10%;
-  bottom: 15%;
-  box-shadow: inset 8px -4px 0px 0px #fff000;
-  background: var(--background);
-  transition: .5s;
-}
-
-input:checked + .slider {
-  background-color: #37abdc;
-}
-
-input:checked + .slider:before {
-  transform: translateX(100%);
-  box-shadow: inset 15px -4px 0px 15px #fff000;
 }
 
 
-.step-path-container{
+
+.step-path-container {
   height: 100%;
   width: 100%;
   display: flex;
@@ -167,42 +101,39 @@ input:checked + .slider:before {
   align-items: center;
   overflow-x: auto;
   margin: 1vh 0 1vh 0;
-
-
 }
 
-.step-tag{
+.step-tag {
   display: none;
   position: absolute;
   font-size: 90px;
-  font-family: 'Roboto Mono', 'sans serif';
+  font-family: "Roboto Mono", "sans serif";
   color: rgb(38, 38, 38);
   top: -270px;
 }
 
-.triangle{
+.triangle {
   display: none;
   position: absolute;
   top: -60px;
 }
-.step-description{
+.step-description {
   display: none;
   position: absolute;
   top: 120px;
   white-space: nowrap;
 }
 
-
 .step-path > .step-container:first-child {
   margin-left: 10vw;
 }
-.step-path .step-container:last-child{
-    margin-right: 10vw;
+.step-path .step-container:last-child {
+  margin-right: 10vw;
 }
 
-.step-container{
+.step-container {
   position: relative;
-  margin:0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,10 +152,11 @@ input:checked + .slider:before {
   margin: 0;
   box-shadow: 5px 7px 0px rgb(59, 16, 230);
   cursor: pointer;
-  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out,
+    background-color 0.2s ease-out;
 }
 
-.statistics-container{
+.statistics-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -236,43 +168,44 @@ input:checked + .slider:before {
   transform: translateY(-5px);
 }
 
-.step:hover  + .step-description {
+.step:hover + .step-description {
   opacity: 1;
   visibility: visible;
 }
 
-
 .line {
-    height: 20px;
-    width: 300px;
-    background-color: rgb(38, 38, 38);;
-    margin: -3px;
-    min-width: 300px; 
-
+  height: 20px;
+  width: 300px;
+  background-color: rgb(38, 38, 38);
+  margin: -3px;
+  min-width: 300px;
 }
 
-
-
-
-
-
-
-
-
 @keyframes bouncePersonal {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-2px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes horizontal-move {
-  0% { transform: rotate(3deg)}
-  50% { transform: rotate(0);}
-  100% { transform: rotate(-3deg);}
-
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
 }
 
-.xp-progress-container{
+.xp-progress-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -280,17 +213,14 @@ input:checked + .slider:before {
   width: 30%;
   height: 30vh;
   color: rgb(38, 38, 38);
-
-
 }
 
-.progress-bar-container{
+.progress-bar-container {
   width: 100%;
   align-items: center;
   display: flex;
   padding: 0;
   justify-content: center;
-
 }
 .progress-container {
   width: 70%;
@@ -300,67 +230,62 @@ input:checked + .slider:before {
   overflow: hidden;
   animation: bouncePersonal 6s infinite alternate ease-in-out;
   cursor: pointer;
-
-
 }
-
 
 .progress-bar {
   height: 100%;
   width: 0%;
   background-color: #49e426;
-  transition: width 0.5s ease-in-out;  
+  transition: width 0.5s ease-in-out;
 }
 
-.xp-progress-min-max{
+.xp-progress-min-max {
   display: none;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-
 }
 
-#xp-min{
+#xp-min {
   margin: 0 0 0 5%;
   font-size: 30px;
-  font-weight:bold;
-  font-family: 'Roboto Mono';
-
+  font-weight: bold;
+  font-family: "Roboto Mono";
 }
 
-#xp-max{
+#xp-max {
   margin: 0 5% 0 0;
   font-size: 30px;
-  font-weight:bold;
-  font-family: 'Roboto Mono';
+  font-weight: bold;
+  font-family: "Roboto Mono";
 }
 
-#xp-text{
+#xp-text {
   font-size: 25px;
   margin: 0;
-  font-weight:bold;
-  font-family: 'Roboto Mono';
+  font-weight: bold;
+  font-family: "Roboto Mono";
   animation: bouncePersonal 2s infinite alternate ease-in-out;
-
 }
 
-#liv-attuale{
+#liv-attuale {
   font-size: 25px;
   margin: 0 10px 0 0;
-  font-weight:bold;
-  font-family: 'Roboto Mono';
+  font-weight: bold;
+  font-family: "Roboto Mono";
   animation: horizontal-move 2s infinite alternate ease-in-out;
-
-
 }
 
-#liv-successivo{
+#liv-successivo {
   font-size: 25px;
   margin: 0 0 0 10px;
-  font-weight:bold;
-  font-family: 'Roboto Mono';
+  font-weight: bold;
+  font-family: "Roboto Mono";
   animation: horizontal-move 1s infinite alternate ease-in-out;
-
-
 }
 
+@media screen and (max-width: 1000px) {
+  .xp-progress-container {
+    width: 50%;
+  }
+}

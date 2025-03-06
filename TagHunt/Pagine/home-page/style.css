@@ -1,22 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/apercu-pro');
-
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/apercu-pro");
 
 :root {
-    --colore-principale: #fff0e6 ; 
-    --colore-secondario: #3056e1 ;
-    --colore-terziario: #ff6f61; 
+  --colore-principale: #fff0e6;
+  --colore-secondario: #3056e1;
+  --colore-terziario: #ff6f61;
 }
 
 *::-webkit-scrollbar {
-    display: none;  
-  }
+  display: none;
+}
 
-body{
-    background-color:var(--colore-principale) ;
-    overflow-x:hidden;
-    margin: 0;
-    padding: 0;
+body {
+  background-color: var(--colore-principale);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 #cerchio {
@@ -32,427 +31,403 @@ body{
   z-index: 100;
 }
 
-.sticky{
-    position: sticky;
-    top: 0;
-  }
-
-#first-page-section{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow-x: hidden;
-    z-index: 0;
+.sticky {
+  position: sticky;
+  top: 0;
 }
 
-
-
-  
-  
-  #Title{
-    display: flex;
-    align-items: center;
-    color: var(--colore-secondario);
-    font-family: 'Roboto Mono', 'sans serif';
-    font-style: normal;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: 10px solid rgb(66, 30, 247);
-    font-size: calc(10vw + 1.5em);
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    text-shadow: 0.5vw 0.5vw 0 rgb(0, 0, 0);
-    animation: 
-    typing 3s steps(40, end), 
-    blink-caret .75s step-end infinite;
-    padding-bottom: 7vh;
-  }
-
-  .start-button{
-    background-color: var(--colore-terziario);
-    visibility: hidden;
-    width: calc(13% + 1em);
-    height: calc(9% + 1em);
-    box-shadow: 0.5vw 0.5vw 0 rgb(0, 0, 0);   
-    border: black solid 2px; 
-    cursor: pointer;
-    font-family: 'Roboto Mono';
-    font-size: 1em;
-    font-weight: bold;
-
-  }
-  
-  .start-button:hover {
-    box-shadow: 0.2vw 0.2vw 0px;
-    transform: translateY(-2px);
-   }
-  
-   .start-button:active {
-    box-shadow: 0px 0px 0px;
-    transform: translateY(2px);
-   }
- 
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 78% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(0, 0, 0) }
-  }
-
-
-  
-
-
-.tags_before div{
-    display: flex;
-    font-size: calc(1vw + 0.5em);
-    animation: scroll_before 160s linear infinite;
+#first-page-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  z-index: 0;
 }
 
+#Title {
+  display: flex;
+  align-items: center;
+  color: var(--colore-secondario);
+  font-family: "Roboto Mono", "sans serif";
+  font-style: normal;
+  overflow: hidden;   border-right: 10px solid rgb(66, 30, 247);
+  font-size: calc(10vw + 1.5em);
+  white-space: nowrap;   margin: 0 auto;   text-shadow: 0.5vw 0.5vw 0 rgb(0, 0, 0);
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  padding-bottom: 7vh;
+}
+
+.start-button {
+  background-color: var(--colore-terziario);
+  visibility: hidden;
+  width: calc(13% + 1em);
+  height: calc(9% + 1em);
+  box-shadow: 0.5vw 0.5vw 0 rgb(0, 0, 0);
+  border: black solid 2px;
+  cursor: pointer;
+  font-family: "Roboto Mono";
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.start-button:hover {
+  box-shadow: 0.2vw 0.2vw 0px;
+  transform: translateY(-2px);
+}
+
+.start-button:active {
+  box-shadow: 0px 0px 0px;
+  transform: translateY(2px);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 78%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(0, 0, 0);
+  }
+}
+
+.tags_before div {
+  display: flex;
+  font-size: calc(1vw + 0.5em);
+  animation: scroll_before 160s linear infinite;
+}
 
 .tags_after div {
-    display: flex;
-    font-size: calc(1vw + 0.5em);
-    animation: scroll 160s linear infinite;
+  display: flex;
+  font-size: calc(1vw + 0.5em);
+  animation: scroll 160s linear infinite;
 }
 .tags span {
-    display: inline-block;
-    padding: 0 2rem;
+  display: inline-block;
+  padding: 0 2rem;
 }
 
 @keyframes scroll_before {
-    from {
-        transform: translateX(-50%);
-    }
-    to{
-        transform: translateX(0%);
-    }
-    
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
 @keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-#second-page-section{
-    background-color: var(--colore-secondario);
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    overflow-x:hidden;
-    z-index: 1;
-
-    
-}
-  
-#second-page-section h1{
-    color: var(--colore-principale);
-    font-family: 'apercu pro';
-    font-size: calc(5vw + 1em); 
-    text-shadow: 0.5vw 0.1vw 0 rgb(0, 0, 0);
-    margin-left: 2%;
-
+#second-page-section {
+  background-color: var(--colore-secondario);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  z-index: 1;
 }
 
-#second-page-section p{
-    color: var(--colore-principale);
-    font-family: 'Roboto Mono';
-    text-shadow: 1px 1px  black;
-    font-weight: bold;
-    line-height: 1.5em;
-    margin-left: 4%;
+#second-page-section h1 {
+  color: var(--colore-principale);
+  font-family: "apercu pro";
+  font-size: calc(5vw + 1em);
+  text-shadow: 0.5vw 0.1vw 0 rgb(0, 0, 0);
+  margin-left: 2%;
 }
 
+#second-page-section p {
+  color: var(--colore-principale);
+  font-family: "Roboto Mono";
+  text-shadow: 1px 1px black;
+  font-weight: bold;
+  line-height: 1.5em;
+  margin-left: 4%;
+}
 
-.step-path-container{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-  
-  .step-path {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    overflow-x: auto;
-    margin: 1vh 0 1vh 0;
-  
-  
-  }
-  
-  .step-tag{
-    display: none;
-    position: absolute;
-    font-size: 90px;
-    font-style: italic;
-    color: rgb(38, 38, 38);
-    top: -270px;
-  }
-  
-  .triangle{
-    display: none;
-    position: absolute;
-    top: -60px;
-  }
-  .step-description{
-    display: none;
-    position: absolute;
-    top: 120px;
-    white-space: nowrap;
-  }
-  
-  
-  .step-path > .step:first-child {
-    margin-left: 14vw;
-  }
-  .step-path .step:last-child{
-      margin-right: 10vw;
-  }
-  
-  .step-container{
-    position: relative;
-    margin:0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .step {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 70px;
-    min-height: 110px;
-    min-width: 110px;
-    border-radius: 50%;
-    background-color: rgb(38, 38, 38);
-    margin: 0;
-    box-shadow: 5px 7px 0px rgb(240, 244, 9);
-    cursor: pointer;
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
-  }
-  
-  .step:hover {
-    background-color: rgb(245, 237, 15);
-    box-shadow: 5px 10px 0px rgb(38, 38, 38);
-    transform: translateY(-5px);
-  }
-  
-  .step:hover  + .step-description {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  
-  .line {
-      height: 20px;
-      width: 317px;
-      background-color: rgb(38, 38, 38);;
-      margin: -3px;
-      min-width: 317px; 
-  
-  }
-  
-  
-  
-  
-  
-  
+.step-path-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
 
-#third-page-section{
+.step-path {
   position: relative;
-    background-color: var(--colore-principale) ;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    z-index: 10;
-    padding-bottom: 15vh ;
-    
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  margin: 1vh 0 1vh 0;
 }
 
-#third-page-section :last-child{
-    justify-content: end;
-}
-  
-#third-page-section h1{
-    color: var(--colore-terziario);
-    font-family: 'apercu pro';
-    font-size: calc(5vw + 1em); 
-    text-shadow: 0.5vw 0.1vw 0 rgb(0, 0, 0);
-    margin-left: 2%;
-    margin-bottom: 0;
-
-    
+.step-tag {
+  display: none;
+  position: absolute;
+  font-size: 90px;
+  font-style: italic;
+  color: rgb(38, 38, 38);
+  top: -270px;
 }
 
-#third-page-section ul{
-    color: var(--colore-terziario);
-    font-family: 'Roboto Mono';
-    margin-left: 2%;
-    font-weight: bold;
-    line-height: 1.5em;
-    text-shadow: 1px 0px black;
-    z-index: 3;
-
+.triangle {
+  display: none;
+  position: absolute;
+  top: -60px;
+}
+.step-description {
+  display: none;
+  position: absolute;
+  top: 120px;
+  white-space: nowrap;
 }
 
-#third-page-section ul span{
+.step-path > .step:first-child {
+  margin-left: 14vw;
+}
+.step-path .step:last-child {
+  margin-right: 10vw;
+}
+
+.step-container {
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 70px;
+  min-height: 110px;
+  min-width: 110px;
+  border-radius: 50%;
+  background-color: rgb(38, 38, 38);
+  margin: 0;
+  box-shadow: 5px 7px 0px rgb(240, 244, 9);
+  cursor: pointer;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out,
+    background-color 0.2s ease-out;
+}
+
+.step:hover {
+  background-color: rgb(245, 237, 15);
+  box-shadow: 5px 10px 0px rgb(38, 38, 38);
+  transform: translateY(-5px);
+}
+
+.step:hover + .step-description {
+  opacity: 1;
+  visibility: visible;
+}
+
+.line {
+  height: 20px;
+  width: 317px;
+  background-color: rgb(38, 38, 38);
+  margin: -3px;
+  min-width: 317px;
+}
+
+#third-page-section {
+  position: relative;
+  background-color: var(--colore-principale);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  padding-bottom: 15vh;
+}
+
+#third-page-section :last-child {
+  justify-content: end;
+}
+
+#third-page-section h1 {
+  color: var(--colore-terziario);
+  font-family: "apercu pro";
+  font-size: calc(5vw + 1em);
+  text-shadow: 0.5vw 0.1vw 0 rgb(0, 0, 0);
+  margin-left: 2%;
+  margin-bottom: 0;
+}
+
+#third-page-section ul {
+  color: var(--colore-terziario);
+  font-family: "Roboto Mono";
+  margin-left: 2%;
+  font-weight: bold;
+  line-height: 1.5em;
+  text-shadow: 1px 0px black;
+  z-index: 3;
+}
+
+#third-page-section ul span {
   font-size: 40px;
 }
 
-#third-page-section ul li{
-    padding-bottom: 10%;
-
+#third-page-section ul li {
+  padding-bottom: 10%;
 }
 
 .container {
-    display: flex;
-    height:  65vh;
-    padding-right: 2%;
-    padding-left: 10%;
+  display: flex;
+  height: 65vh;
+  padding-right: 2%;
+  padding-left: 10%;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  border: 2px solid #000000;
+  flex-grow: 1;
+  min-width: 20vw;
+  overflow: auto;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: #fff0e6;
+  width: 90%;
+}
+
+.title {
+  margin-top: 4vh;
+  width: 75%;
+  height: 5vh;
+  background-color: rgb(206, 206, 206);
+  border: solid black 1px;
+}
+
+#descrizione {
+  margin-top: 5vh;
+  word-wrap: break-word;
+}
+
+#instructions-rows {
+  margin-top: 5vh;
+  word-wrap: break-word;
+}
+
+.submit-button {
+  margin-top: 4vh;
+  width: 30%;
+  height: 5vh;
+  background-color: rgb(236, 236, 236);
+  border: solid black 1px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: rgb(206, 206, 206);
+}
+
+#left-panel {
+  background-color: #fff0e6;
+}
+#center-panel {
+  background-color: rgb(255, 255, 255);
+}
+#right-panel {
+  background-color: #ffffff;
+}
+
+.resizer {
+  min-width: 10px;
+  background-color: #ccc;
+  cursor: ew-resize;
+  height: 100%;
+}
+
+#editor,
+#result {
+  height: 100%;
+  width: 100%;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#Sign-up-container {
+  position: relative;
+  height: 50vh;
+  background-color: #000000;
+  z-index: 4;
+  margin: 0;
+  padding-top: 2%;
+  text-align: center;
+}
+
+#Sign-up-container h1 {
+  color: rgb(255, 255, 0);
+  font-family: "apercu pro";
+  font-size: calc(5vw + 1em);
+  text-shadow: 0.5vw 0.1vw 0 rgb(59, 16, 230);
+  margin: 0;
+}
+
+#Sign-up-container button {
+  visibility: visible;
+  margin-top: 3%;
+  background-color: rgb(59, 16, 230);
+  color: rgb(255, 255, 0);
+  box-shadow: 0.5vw 0.5vw 0 rgb(234, 255, 0);
+}
+
+#Sign-up-container button:hover {
+  box-shadow: 0.2vw 0.2vw 0px;
+  transform: translateY(-2px);
+}
+
+#Sign-up-container button:active {
+  box-shadow: 0px 0px 0px;
+  transform: translateY(2px);
+}
+
+@media screen and (max-width: 700px) {
+  .content-container {
+    flex-direction: column;
   }
-  
+
+  #third-page-section ul span {
+    font-size: 30px;
+  }
+
+  .container {
+    padding: 0;
+  }
   .panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    border: 2px solid #000000;
-    flex-grow: 1;
-    min-width: 20vw;
-    overflow: auto;
+    min-width: 40vw;
   }
-  
-  .instructions{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    background-color: #fff0e6 ;
-    width: 90%;
-  
-  }
-  
-  .title{
-    margin-top: 4vh;
-    width: 75%;
-    height: 5vh;
-    background-color: rgb(206, 206, 206);
-    border: solid black 1px;
-  }
-  
-  #descrizione{
-    margin-top: 5vh;
-    word-wrap: break-word;
-  }
-  
-  #instructions-rows{
-    margin-top: 5vh;
-    word-wrap: break-word;
-  }
-  
-  .submit-button{
-    margin-top: 4vh;
-    width: 30%;
-    height: 5vh;
-    background-color: rgb(236, 236, 236);
-    border: solid black 1px;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover{
-    background-color: rgb(206, 206, 206);
-  }
-  
-  #left-panel { background-color: #fff0e6; }
-  #center-panel { background-color: rgb(255, 255, 255); }
-  #right-panel { background-color: #ffffff; }
-  
-  .resizer {
-    min-width: 10px;
-    background-color: #ccc;
-    cursor: ew-resize;
-    height: 100%;
-  }
-  
-  #editor, #result {
-    height: 100%;
-    width: 100%;
-  }
-
-  .content-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  #Sign-up-container{
-    position: relative;
-    height: 50vh ;
-    background-color: #000000;
-    z-index: 4;
-    margin: 0;
-    padding-top: 2%;
-    text-align:center;
-    
-  }
-
-  #Sign-up-container h1{
-    color: rgb(255, 255, 0);
-    font-family: 'apercu pro';
-    font-size: calc(5vw + 1em); 
-    text-shadow: 0.5vw 0.1vw 0 rgb(59, 16, 230);
-    margin: 0     
-  }
-  
-  #Sign-up-container button{
-    visibility: visible;
-    margin-top: 3%;
-    background-color: rgb(59, 16, 230) ;
-    color: rgb(255, 255, 0);
-    box-shadow: 0.5vw 0.5vw 0 rgb(234, 255, 0);   
-  }
-
-  #Sign-up-container button:hover {
-    box-shadow: 0.2vw 0.2vw 0px ;
-    transform: translateY(-2px);
-   }
-  
-   #Sign-up-container button:active {
-    box-shadow: 0px 0px 0px;
-    transform: translateY(2px);
-   }
-
-  @media screen and (max-width: 700px) {
-    .content-container{
-      flex-direction: column;
-      
-    }
-
-    #third-page-section ul span{
-      font-size: 30px;
-    }
-  
-    .container{
-      padding: 0;
-    }
-    .panel{
-      min-width: 40vw;
-    }
-    
-  }
+}

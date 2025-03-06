@@ -1,37 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/apercu-pro");
 
+*::-webkit-scrollbar {
+  display: none;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-  @import url('https://fonts.cdnfonts.com/css/apercu-pro');
-  
-  *::-webkit-scrollbar {
-    display: none;  
-  }
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "Roboto Mono";
+}
+#cerchio {
+  width: 300vw;
+  height: 300vw;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  left: -100vw;
+  top: -100vw;
+  transition: all 2.3s ease;
+  z-index: 100;
+}
 
-  body{
-    overflow-x: hidden;
-    margin: 0;
-    font-family: 'Roboto Mono';
-  }
-  #cerchio {
-    width: 300vw;
-    height: 300vw;
-    background-color: black;
-    border-radius: 50%;
-    position: absolute;
-    left: -100vw;
-    top: -100vw;
-    transition: all 2.3s ease;
-    z-index: 100;
-  }
-
-  nav{
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-  }
-  /* From Uiverse.io by Jedi-hongbin */ 
+nav {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .back-button {
   display: flex;
   height: 50%;
@@ -44,7 +40,7 @@
   border-radius: 3px;
   letter-spacing: 1px;
   font-size: large;
-  font-family: 'apercu pro';
+  font-family: "apercu pro";
   color: rgb(0, 0, 0);
   transition: all 0.2s linear;
   cursor: pointer;
@@ -52,97 +48,44 @@
   box-shadow: 6px 6px 0 black;
   margin-left: 2%;
   margin-top: 2%;
- }
- 
- .back-button > svg {
+}
+
+.back-button > svg {
   margin-right: 5px;
   margin-left: 5px;
   font-size: 20px;
   transition: all 0.4s ease-in;
- }
- 
- .back-button:hover > svg {
+}
+
+.back-button:hover > svg {
   font-size: 1.2em;
   transform: translateX(-5px);
- }
- 
- .back-button:hover {
+}
+
+.back-button:hover {
   box-shadow: 2px 2px 0px #000000;
   transform: translateY(-2px);
- }
+}
 
- .back-button:active {
+.back-button:active {
   box-shadow: 0px 0px 0px #000000;
   transform: translateY(2px);
- }
-
-
- .switch {
-  font-size: 17px;
-  position: relative;
-  display: inline-block;
-  width: 3.5em;
-  height: 2em;
-  margin-right: 2%;
 }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
 
-/* The slider */
-.slider {
-  --background: #28096b;
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--background);
-  transition: .5s;
-  border-radius: 30px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 1.4em;
-  width: 1.4em;
-  border-radius: 50%;
-  left: 10%;
-  bottom: 15%;
-  box-shadow: inset 8px -4px 0px 0px #fff000;
-  background: var(--background);
-  transition: .5s;
-}
-
-input:checked + .slider {
-  background-color: #37abdc;
-}
-
-input:checked + .slider:before {
-  transform: translateX(100%);
-  box-shadow: inset 15px -4px 0px 15px #fff000;
-}
-
-.user-level-info{
+.user-level-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin:0;
-
+  margin: 0;
 }
 
-#username{
+#username {
   font-size: calc(3vw + 1em);
   font-weight: bold;
 }
 
-.xp-progress-container{
+.xp-progress-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,19 +95,18 @@ input:checked + .slider:before {
   margin: 0 auto;
 }
 
-.progress-bar-container{
+.progress-bar-container {
   width: 100%;
   align-items: center;
   display: flex;
   padding: 0;
   justify-content: space-between;
-
 }
 .progress-container {
   width: 90%;
   height: calc(1vw + 0.5em);
   background-color: #e0e0e0;
-  border:  calc(0.2vw + 0.5em) solid black;
+  border: calc(0.2vw + 0.5em) solid black;
   overflow: hidden;
 }
 
@@ -175,47 +117,46 @@ input:checked + .slider:before {
   transition: width 0.5s ease-in-out;
 }
 
-.xp-progress-min-max{
+.xp-progress-min-max {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-
 }
 
-#xp-min{
+#xp-min {
   margin: 0 0 0 5%;
   font-size: calc(1vw + 0.5em);
-  font-weight:bold;
-  font-family: 'Roboto Mono';
+  font-weight: bold;
+  font-family: "Roboto Mono";
 }
 
-#xp-max{
+#xp-max {
   margin: 0 5% 0 0;
   font-size: calc(1vw + 0.5em);
-  font-weight:bold;
-  font-family: 'Roboto Mono';
+  font-weight: bold;
+  font-family: "Roboto Mono";
 }
 
-#xp-text{
+#xp-text {
   font-size: calc(3vw + 1em);
   margin: 0;
-  font-weight:bold;
-  font-family: 'Roboto Mono';
+  font-weight: bold;
+  font-family: "Roboto Mono";
 }
 
-#liv-attuale{
+#liv-attuale {
   font-size: calc(3vw + 1em);
   margin: 0 15px 0 0;
-  font-weight:bold;
-  font-family: 'Roboto Mono';
+  font-weight: bold;
+  font-family: "Roboto Mono";
 }
 
-#liv-successivo{
+#liv-successivo {
   font-size: calc(3vw + 1em);
   margin: 0 0 0 15px;
-  font-weight:bold;
-  font-family: 'Roboto Mono';
+  font-weight: bold;
+  font-family: "Roboto Mono";
 }
 
 .table-container {
@@ -223,7 +164,6 @@ input:checked + .slider:before {
   max-width: 800px;
   background: white;
   padding: 20px;
-  
 }
 
 table {
@@ -232,7 +172,8 @@ table {
   margin-top: 10px;
 }
 
-th, td {
+th,
+td {
   padding: 12px;
   text-align: left;
 }
@@ -247,7 +188,7 @@ tr:hover {
   transition: 0.3s;
 }
 
-.gallery-container{
+.gallery-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -262,10 +203,15 @@ tr:hover {
 }
 
 @keyframes horizontal-move {
-  0% { transform: rotate(10deg)}
-  50% { transform: rotate(0);}
-  100% { transform: rotate(-10deg);}
-
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
 }
 
 .grid-item {
@@ -276,14 +222,14 @@ tr:hover {
   border: black solid 2px;
 }
 
-.grid-item span{
-  display: block; 
+.grid-item span {
+  display: block;
   font-size: 30px;
   animation: horizontal-move 2s infinite alternate ease-in-out;
 }
 
 @media screen and (max-width: 800px) {
   .xp-progress-container {
-      width: 90%;
+    width: 90%;
   }
 }

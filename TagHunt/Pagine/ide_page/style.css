@@ -1,17 +1,12 @@
-@import url('https://fonts.cdnfonts.com/css/apercu-pro');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-
-
-
-
-
+@import url("https://fonts.cdnfonts.com/css/apercu-pro");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 *::-webkit-scrollbar {
-  display: none;  
+  display: none;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -21,7 +16,7 @@ html, body {
   background-color: #ffffff;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
 }
 
 #cerchio {
@@ -36,19 +31,37 @@ html, body {
   z-index: 100;
 }
 
-nav{
+nav {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
   height: 15vh;
   width: 100vw;
+  background-color: rgb(245, 246, 247);
 }
 
+.tabsContainer {
+  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  height: 0;
+}
+.tab {
+  display: none;
+  text-align: center;
+  width: 20%;
+  height: 70%;
+  box-shadow: 0.5vw 0.5vw 0 rgb(0, 0, 0);
+  margin-left: 2%;
+  font-family: "Roboto Mono";
+}
 
 .back-button {
   display: flex;
-  height: 50%;
-  width: 16%;
+  height: 35%;
+  width: 8%;
   border: #000000 solid 1px;
   min-width: 100px;
   max-width: 150px;
@@ -57,37 +70,37 @@ nav{
   border-radius: 3px;
   letter-spacing: 1px;
   font-size: large;
-  font-family: 'apercu pro';
+  font-family: "apercu pro";
   color: rgb(0, 0, 0);
   transition: all 0.2s linear;
   cursor: pointer;
   background-color: #ededed;
   box-shadow: 6px 6px 0 black;
   margin-left: 2%;
- }
- 
- .back-button > svg {
+  margin-bottom: 1%;
+}
+
+.back-button > svg {
   margin-right: 5px;
   margin-left: 5px;
   font-size: 20px;
   transition: all 0.4s ease-in;
- }
- 
- .back-button:hover > svg {
+}
+
+.back-button:hover > svg {
   font-size: 1.2em;
   transform: translateX(-5px);
- }
- 
- .back-button:hover {
+}
+
+.back-button:hover {
   box-shadow: 2px 2px 0px #000000;
   transform: translateY(-2px);
- }
+}
 
- .back-button:active {
+.back-button:active {
   box-shadow: 0px 0px 0px #000000;
   transform: translateY(2px);
- }
-
+}
 
 .container {
   display: flex;
@@ -104,59 +117,81 @@ nav{
   min-width: 20vw;
   height: 85vh;
   overflow: auto;
-  font-family: 'apercu pro';
+  font-family: "apercu pro";
 }
 
-.instructions{
+.instructions {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: start;
-  background-color: #fff0e6 ;
+  background-color: #ffffff;
+  border: rgb(210, 210, 214) solid 2px;
   width: 90%;
-
+  margin-bottom: 2%;
+  padding: 3%;
 }
 
-.title{
-  margin-top: 4vh;
-  width: 75%;
+#description-section {
+  margin-top: 5%;
+}
+
+#submit-section {
+  align-items: center;
+}
+
+.title {
+  width: 70%;
   height: 5vh;
-  background-color: rgb(206, 206, 206);
-  border: solid black 1px;
+  margin-bottom: 3vh;
 }
 
-#descrizione{
-  margin-top: 5vh;
+#descrizione {
   word-wrap: break-word;
 }
 
-#instructions-rows{
-  margin-top: 5vh;
+#instructions-rows {
   word-wrap: break-word;
 }
 
-.submit-button{
-  margin-top: 4vh;
+.submit-button {
   width: 30%;
   height: 5vh;
   background-color: rgb(236, 236, 236);
   border: solid black 1px;
   cursor: pointer;
+  font-family: "Roboto Mono";
+  box-shadow: 0.1vw 0.1vw 0 rgb(0, 0, 0);
 }
 
-.submit-button:hover{
+#invio-reset {
+  margin-top: 3%;
+}
+
+.submit-button:hover {
   background-color: rgb(206, 206, 206);
 }
 
-#message{
-  color: red; 
+#message {
+  color: red;
   font-weight: bold;
 }
 
+hr {
+  border: 2px solid rgb(167, 167, 167);
+  width: 50%;
+  border-radius: 50%;
+  margin: 3% 0 3% 0;
+}
 
-#left-panel { background-color: #fff0e6; }
-#center-panel { background-color: rgb(255, 255, 255); }
-#right-panel { background-color: #ffffff; }
+#left-panel {
+  background-color: rgb(237, 237, 237);
+}
+#center-panel {
+  background-color: rgb(255, 255, 255);
+}
+#right-panel {
+  background-color: #ffffff;
+}
 
 .resizer {
   min-width: 10px;
@@ -165,30 +200,37 @@ nav{
   height: 85vh;
 }
 
-#editor, #result {
+#editor,
+#result {
   height: 100%;
   width: 100%;
 }
 
-
-
-
-
-
 @keyframes bounce {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-2px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes horizontal-move {
-  0% { transform: rotate(3deg)}
-  50% { transform: rotate(0);}
-  100% { transform: rotate(-3deg);}
-
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
 }
 
-.xp-progress-container{
+.xp-progress-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -197,17 +239,14 @@ nav{
   height: 30vh;
   margin-top: 2%;
   color: rgb(38, 38, 38);
-
-
 }
 
-.progress-bar-container{
+.progress-bar-container {
   width: 100%;
   align-items: center;
   display: flex;
   padding: 0;
   justify-content: center;
-
 }
 .progress-container {
   width: 70%;
@@ -216,10 +255,7 @@ nav{
   box-shadow: 0px 2px 0px 4px rgb(38, 38, 38);
   overflow: hidden;
   animation: bounce 6s infinite alternate ease-in-out;
-
-
 }
-
 
 .progress-bar {
   height: 100%;
@@ -228,81 +264,88 @@ nav{
   transition: width 0.5s ease-in-out;
 }
 
-.xp-progress-min-max{
+.xp-progress-min-max {
   display: flex;
   visibility: hidden;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-
 }
 
-#xp-min{
+#xp-min {
   margin: 0 0 0 5%;
   font-size: 30px;
-  font-weight:bold;
-  font-family: 'Roboto Mono';
-
+  font-weight: bold;
+  font-family: "Roboto Mono";
 }
 
-#xp-max{
+#xp-max {
   margin: 0 5% 0 0;
   font-size: 30px;
-  font-weight:bold;
-  font-family: 'Roboto Mono';
+  font-weight: bold;
+  font-family: "Roboto Mono";
 }
 
-#xp-text{
+#xp-text {
   font-size: 25px;
   margin: 0;
-  font-weight:bold;
-  font-family: 'Roboto Mono';
+  font-weight: bold;
+  font-family: "Roboto Mono";
   animation: bounce 2s infinite alternate ease-in-out;
-
 }
 
-#liv-attuale{
+#liv-attuale {
   font-size: 25px;
   margin: 0 10px 0 0;
-  font-weight:bold;
-  font-family: 'Roboto Mono';
+  font-weight: bold;
+  font-family: "Roboto Mono";
   animation: horizontal-move 2s infinite alternate ease-in-out;
-
-
 }
 
-#liv-successivo{
+#liv-successivo {
   font-size: 25px;
   margin: 0 0 0 10px;
-  font-weight:bold;
-  font-family: 'Roboto Mono';
+  font-weight: bold;
+  font-family: "Roboto Mono";
   animation: horizontal-move 1s infinite alternate ease-in-out;
-
-
 }
 
-
-@media screen and (max-width: 700px) {
-
+@media screen and (max-width: 1220px) {
   *::-webkit-scrollbar {
-    display: auto;  
+    display: auto;
   }
-  .container{
+  .container {
     flex-direction: column;
     height: 85%;
   }
 
-  .resizer{
+  .xp-progress-container {
+    width: 50%;
+  }
+
+  #description-section {
+    margin-top: 0;
+  }
+  .tabsContainer {
+    height: 10%;
+  }
+  .tab {
+    display: block;
+  }
+
+  .resizer {
     display: none;
   }
 
-  .panel{
+  .title {
+    margin-bottom: 5vh;
+  }
+  .panel {
     min-width: 100%;
     min-height: 100vh;
   }
 
-  #left-panel{
+  #left-panel {
     padding-bottom: 5vh;
   }
-  
 }

@@ -21,7 +21,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
 
     let messageDiv = document.getElementById("message");
 
-    // Controlla se l'email è vuota
+    
     if (!email) {
         document.getElementById("message").style.color = "red";
         document.getElementById("message").innerText = "Per favore, inserisci un'email.";
@@ -40,10 +40,10 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
     
     
 
-     const passwordHashata = CryptoJS.SHA256(password).toString();//CryprtoJS restituisce un oggetto wordarray
-                                                                  // utilizzando il metodo .toString, invece, lo converto in un valore esadecimale
+     const passwordHashata = CryptoJS.SHA256(password).toString();
+                                                                  
 
-    //da notare che toString() restituisce un valore esadecimale solo nel caso di wordarray, nel resto dei casi restituisce una stringa normale
+    
 
      const user = {
          id: 0,
@@ -52,10 +52,8 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
          password: passwordHashata,  
      };
 
-     // tramite questa riga di codice non faccio altro che convertire la stringa json in un array di oggetti js
-     let users = JSON.parse(localStorage.getItem('users')) || [];/*l'operatore logico OR mi serve perché la prima volta users
-                                                                    non è ancora creato e il localstorage di default è un json vuoto*/
-    for (let user of users) {
+     
+     let users = JSON.parse(localStorage.getItem('users')) || [];    for (let user of users) {
         if(user.email === email){
             document.getElementById("message").style.color = "red";
             document.getElementById("message").innerText = "email già utilizzta";
@@ -64,13 +62,13 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
     }
     
     user.id = users.length + 1;
-     // a questo punto aggiungo il nuovo utente all'array users, che non è altro che un array di utenti e quindi di oggetti
+     
      users.push(user);
 
-     // infine salvo l'array di oggetti users nel localstorage convertendolo in json
+     
      localStorage.setItem('users', JSON.stringify(users));
 
-     //una cosa da notare è che ogni volta reinserisco completamente l'oggetto users nel localstorge, invece di aggiungere semplicemente un altro user
+     
 
      
      document.getElementById("message").style.color = "green";

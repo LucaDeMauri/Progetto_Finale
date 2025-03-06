@@ -1,43 +1,60 @@
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up Form</title>
-    <link rel="stylesheet" href="Style-Sign.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="Style-Sign.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
     <div id="cerchio"></div>
 
-    <form class="form_main" id="signupForm" >
-        <p class="heading">Sign Up</p>
+    <form class="form_main" id="signupForm">
+      <p class="heading">Sign Up</p>
 
-        <div class="inputContainer">
-            <input placeholder="Email" id="email" name="email" class="inputField" type="email" required>
-        </div>
+      <div class="inputContainer">
+        <input
+          placeholder="Email"
+          id="email"
+          name="email"
+          class="inputField"
+          type="email"
+          required />
+      </div>
 
-        <div class="inputContainer">
-            <input placeholder="username" id="username" name="username" class="inputField" type="text" required>
-        </div>
-        
-        <div class="inputContainer">
-            <input placeholder="Password" id="password" name="password" class="inputField" type="password">
-            <p id="mostra">Mostra</p>
-        </div>
+      <div class="inputContainer">
+        <input
+          placeholder="username"
+          id="username"
+          name="username"
+          class="inputField"
+          type="text"
+          required />
+      </div>
 
-        
-        
-        <div id="message"></div>
-                  
-        <button id="submit-button" type="submit">Submit</button>
-        
-        <div class="signupContainer">
-            <p>hai un account?</p>
-            <a href="../Login/index.html">Login</a>
-        </div>
+      <div class="inputContainer">
+        <input
+          placeholder="Password"
+          id="password"
+          name="password"
+          class="inputField"
+          type="password" />
+        <p id="mostra">Mostra</p>
+      </div>
+
+      <div id="message"></div>
+
+      <button id="submit-button" type="submit">Submit</button>
+
+      <div class="signupContainer">
+        <p>hai un account?</p>
+        <a href="../Login/index.html">Login</a>
+      </div>
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="script-sign.js"></script>
-</body>
+  </body>
 </html>

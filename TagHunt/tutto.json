@@ -1,102 +1,93 @@
 {
-    "tappe": [
-  {
-    "id": 1,
-    "codice": "<!DOCTYPE html> <html> <head> </head> <body> </body> </html>",
-    "titolo": "Tappa 1: Impara a creare un'intestazione",
-    "descrizione": "Gli elementi HTML hanno tag di apertura come <h1>; e tag di chiusura come </h1>;. Il testo che un elemento visualizzerà nella pagina è il contenuto che si trova tra i suoi tag di apertura e chiusura.\n\nQuando hai finito, premi il pulsante 'Invia codice' per vedere se è corretto.",
-    "consegna": "Apri e chiudi il tag <h1> all'interno del body, e scrivi al suo interno 'TagHunter'",
-    "soluzione": [ "<h1>TagHunter</h1>"]
-    
-  },
-  {
-    "id": 2,
-    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> </body> </html>",
-    "titolo": "Tappa 2: Impara a creare un paragrafo",
-    "descrizione": "Il tag <p> in HTML è utilizzato per definire un paragrafo di testo. Viene automaticamente separato dal resto del contenuto con uno spazio sopra e sotto.\n\nOgni blocco di testo racchiuso tra i tag <p> e </p> viene visualizzato come un paragrafo distintivo nella pagina web.",
-    "consegna": "inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
-    "soluzione": [ "<p>scopri tutti i tag</p>" ]
-    
-  },
-  {
-    "id": 3,
-    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> </body> </html>",
-    "titolo": "Tappa 3: Impara a dichiarare un link ipertestuale",
-    "descrizione": "Il tag <a> in HTML viene utilizzato per creare collegamenti ipertestuali (link). Permette di collegare altre pagine web, documenti, indirizzi email o sezioni specifiche della stessa pagina.\n\nLa chiave sta nell'attributo href='' il cui contenuto rappresenta il link al quale si vuole andare",
-    "consegna": "inserisci il tag <a> e assegnagli il valore ",
-    "soluzione": [ "<a href='prova'>prova</a>" ]
-    
-  },
-  {
-    "id": 4,
-    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> </body> </html>",
-    "titolo": "Tappa 4: Impara a inserire un immagine",
-    "descrizione": "Il tag <img> in HTML viene utilizzato per incorporare immagini in una pagina web. È un elemento autochiuso, quindi non ha un tag di chiusura. Potremmo dire quindi che il suo valore è rappresentato dall'uttibuto src='' il cui valore specifica l'indirizzo dell'immagine che si vuole inserire ",
-    "consegna": "inserisci il tag <img> e assegna all'attributo src='' il link https://imgur.com/GmfBYJX.jpg",
-    "soluzione": [ "<img src='https://imgur.com/GmfBYJX.jpg'>" ]
-    
-  },
-  {
-    "id": 5,
-    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> </body> </html>",
-    "titolo": "Tappa 5: Impara a creare un elenco non ordinato",
-    "descrizione": "Il tag <ul> in HTML viene utilizzato per creare elenchi non ordinati, in cui gli elementi sono preceduti da punti (bullet points) invece che da numeri o lettere.",
-    "consegna": "inserisci il tag <ul>",
-    "soluzione": [ "<ul></ul>" ]
-    
-  },
-  {
-    "id": 6,
-    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul></ul> </body> </html>",
-    "titolo": "Tappa 6: Impara a dichiarare l'elemento di un elenco",
-    "descrizione": "Il tag <li> in HTML viene utilizzato per definire un elemento di una lista. Deve essere sempre contenuto all'interno di un elenco, come <ul> per liste non ordinate o <ol> per liste ordinate.",
-    "consegna": "Aggiungi tre elementi <li> all'interno del tag <ul>.",
-    "soluzione": [ "<li>Elemento 1</li> <li>Elemento 2</li> <li>Elemento 3</li>" ]
-  },
-  {
-    "id": 7,
-    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> </body> </html>",
-    "titolo": "Tappa 7: Impara a creare un form",
-    "descrizione": "Il tag <form> in HTML viene utilizzato per creare moduli interattivi che permettono agli utenti di inserire e inviare dati.",
-    "consegna": "Aggiungi un tag <form> sotto la lista <ul>.",
-    "soluzione": [ "<form></form>" ]
-  },
-  {
-    "id": 8,
-    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form></form> </body> </html>",
-    "titolo": "Tappa 8: Che cos'è un fieldset",
-    "descrizione": "Il tag <fieldset> in HTML viene utilizzato per raggruppare logicamente elementi di un modulo, migliorandone la struttura e l'accessibilità.",
-    "consegna": "Inserisci un <fieldset> all'interno del tag <form>.",
-    "soluzione": [ "<fieldset></fieldset>" ]
-  },
-  {
-    "id": 9,
-    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form> <fieldset></fieldset> </form> </body> </html>",
-    "titolo": "Tappa 9: Impara a creare una legend",
-    "descrizione": "Il tag <legend> in HTML viene utilizzato all'interno di un <fieldset> per fornire una descrizione del gruppo di campi.",
-    "consegna": "Aggiungi un tag <legend> all'interno di <fieldset> e scrivi 'Informazioni utente'.",
-    "soluzione": [ "<legend>che ne pensi di TagHunter</legend>" ]
-  },
-  {
-    "id": 10,
-    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form> <fieldset> <legend>Informazioni utente</legend> </fieldset> </form> </body> </html>",
-    "titolo": "Tappa 10: Impara a richiedere dati",
-    "descrizione": "Il tag <input> in HTML viene utilizzato per creare campi di inserimento dati in un modulo, come campi di testo, checkbox o pulsanti radio.",
-    "consegna": "Aggiungi un campo di input di tipo 'text' all'interno di <fieldset>.",
-    "soluzione": [ "<input type='text' placeholder='Inserisci il tuo nome'>" ]
-  },
-  {
-    "id": 11,
-    "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <a></a> <img> <ul> <li></li> <li></li> <li></li> </ul> <form> <fieldset> <legend>Informazioni utente</legend> <input type='text' placeholder='Inserisci il tuo nome'> </fieldset> </form> </body> </html>",
-    "titolo": "Tappa 11: Impara a inviare dati",
-    "descrizione": "Il tag <button> in HTML viene utilizzato per creare pulsanti interattivi, come quelli per l'invio di moduli.",
-    "consegna": "Aggiungi un pulsante <button> con il testo 'Invia' all'interno di <fieldset>.",
-    "soluzione": [ "<button type='submit'>Invia</button>" ]
-  }
-  
-  
-
-
-]
-  }
-  
+  "tappe": [
+    {
+      "id": 1,
+      "codice": "<!DOCTYPE html> <html> <head> </head> <body> </body> </html>",
+      "titolo": "Tappa 1: Impara a creare un'intestazione",
+      "descrizione": "In HTML, ogni documento inizia con il dichiarare il tipo di documento con il tag <!DOCTYPE html>. Questo indica che il documento è un file HTML5. I tag HTML sono strutturati in due sezioni principali: l'intestazione (<head>) e il corpo (<body>).\n\nIl tag <h1> viene utilizzato per creare titoli o intestazioni, e il numero 1 indica che è il titolo principale della pagina. Puoi usare anche altri numeri (h2, h3, h4, ecc.) per gerarchizzare i titoli in base all'importanza.\n\nQuando hai finito, premi il pulsante 'Invia codice' per vedere se è corretto.",
+      "consegna": "Apri e chiudi il tag <h1> all'interno del body, e scrivi al suo interno 'TagHunter'",
+      "soluzione": [ "<h1>TagHunter</h1>" ]
+    },
+    {
+      "id": 2,
+      "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> </body> </html>",
+      "titolo": "Tappa 2: Impara a creare un paragrafo",
+      "descrizione": "Il tag <p> in HTML viene utilizzato per creare paragrafi di testo. Ogni paragrafo è separato dagli altri con uno spazio verticale sopra e sotto.\n\nQuesto rende più leggibile il contenuto della pagina. Puoi anche applicare stili ai paragrafi, come modificare la dimensione del testo, il colore o l'allineamento, usando i CSS (Cascading Style Sheets). Questi stili però sono separati dal codice HTML.\n\nOgni testo che si trova tra i tag di apertura <p> e chiusura </p> sarà visualizzato come un paragrafo separato.",
+      "consegna": "Inserisci il tag <p> sotto <h1> e scrivi all'interno 'scopri tutti i tag'",
+      "soluzione": [ "<p>scopri tutti i tag</p>" ]
+    },
+    {
+      "id": 3,
+      "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> </body> </html>",
+      "titolo": "Tappa 4: Impara a inserire un'immagine",
+      "descrizione": "Il tag <img> in HTML è utilizzato per inserire immagini all'interno di una pagina. L'elemento <img> è autochiuso, il che significa che non ha un tag di chiusura. Per specificare l'immagine da visualizzare, si usa l'attributo src, che contiene il percorso dell'immagine.\n\nPuoi anche usare altri attributi come 'alt', che fornisce una descrizione dell'immagine nel caso in cui non venga visualizzata, o per migliorare l'accessibilità per gli utenti con disabilità visive.",
+      "consegna": "Inserisci il tag <img> e assegna all'attributo src='' il link ../../html-image.png",
+      "soluzione": [ "<img src='../../html-image.png' alt='logo html'>" ]
+    },
+    {
+      "id": 4,
+      "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <img src='../../html-image.png' alt='logo html'> </body> </html>",
+      "titolo": "Tappa 5: Impara a creare un elenco non ordinato",
+      "descrizione": "Il tag <ul> è utilizzato per creare elenchi non ordinati, in cui gli elementi della lista sono preceduti da un simbolo a forma di punto (bullet point).\n\nIl tag <ul> deve contenere uno o più tag <li> (list item), ognuno dei quali definisce un elemento della lista. Gli elenchi sono molto utili per presentare informazioni in modo chiaro e ordinato.",
+      "consegna": "Inserisci il tag <ul> per creare un elenco non ordinato.",
+      "soluzione": [ "<ul></ul>" ]
+    },
+    {
+      "id": 5,
+      "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <img src='../../html-image.png' alt='logo html'> <ul></ul> </body> </html>",
+      "titolo": "Tappa 6: Impara a dichiarare l'elemento di un elenco",
+      "descrizione": "Il tag <li> è utilizzato per definire un singolo elemento all'interno di un elenco. Ogni elemento di una lista, sia ordinata (<ol>) che non ordinata (<ul>), è racchiuso tra i tag <li> e </li>.\n\nLe liste ordinate (tag <ol>) sono utilizzate quando si desidera una numerazione automatica degli elementi, mentre le liste non ordinate (<ul>) usano i punti per separare gli elementi.",
+      "consegna": "Aggiungi tre elementi <li> all'interno del tag <ul>.",
+      "soluzione": [ "<li>h1</li> <li>p</li> <li>img</li>" ]
+    },
+    {
+      "id": 6,
+      
+      "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <img src='../../html-image.png' alt='logo html'> <ul> <li>h1</li> <li>p</li> <li>img</li> </ul> </body> </html>",
+      "titolo": "Tappa 3: Impara a dichiarare un link ipertestuale",
+      "descrizione": "Il tag <a> in HTML è utilizzato per creare collegamenti ipertestuali (link), che possono portare a un'altra pagina web, a un altro file, a un indirizzo email, o anche a una specifica sezione della stessa pagina. Un link è formato dal tag <a> e dall'attributo href, che contiene l'URL di destinazione.\n\nÈ possibile anche aggiungere attributi come 'target=\"_blank\"' per aprire il link in una nuova finestra.\n\nI link sono essenziali per la navigazione tra le pagine web.",
+      "consegna": "Inserisci il tag <a> e assegnagli il valore 'href=' per creare un link verso una pagina esterna.",
+      "soluzione": [ "<a href='https://www.w3schools.com/html/default.asp'>visualizza tutti i tag</a>" ]
+    },
+    {
+      "id": 7,
+      "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <img src='../../html-image.png' alt='logo html'> <ul> <li>h1</li> <li>p</li> <li>img</li> </ul> <a href='https://www.w3schools.com/html/default.asp'>visualizza tutti i tag</a>  <a href='https://www.w3schools.com/html/default.asp'>visualizza tutti i tag</a> </body> </html>",
+      "titolo": "Tappa 7: Impara a creare un form",
+      "descrizione": "Il tag <form> in HTML è utilizzato per creare moduli interattivi che permettono agli utenti di inserire e inviare dati. I form sono essenziali per raccogliere informazioni dagli utenti, come nomi, indirizzi e altro.\n\nIl tag <form> può includere diversi tipi di campi di input, come testi, pulsanti, checkbox e radio button. Il metodo per inviare i dati dal modulo può essere definito tramite l'attributo method (GET o POST).",
+      "consegna": "Aggiungi un tag <form> sotto la lista <ul>.",
+      "soluzione": [ "<form action='../../ringraziamenti.html' method='GET'></form>" ]
+    },
+    {
+      "id": 8,
+      "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <img src='../../html-image.png' alt='logo html'> <ul> <li>h1</li> <li>p</li> <li>img</li> </ul>   <a href='https://www.w3schools.com/html/default.asp'>visualizza tutti i tag</a> <form action='../../ringraziamenti.html' method='GET'></form> </body> </html>",
+      "titolo": "Tappa 8: Che cos'è un fieldset",
+      "descrizione": "Il tag <fieldset> in HTML viene utilizzato per raggruppare logicamente elementi di un modulo, migliorandone la struttura e l'accessibilità. Il campo <fieldset> viene comunemente utilizzato insieme al tag <legend> per dare una descrizione al gruppo di campi del modulo.\n\nQuesto aiuta l'utente a comprendere meglio la struttura e lo scopo di ciascun gruppo di campi nel modulo.",
+      "consegna": "Inserisci un <fieldset> all'interno del tag <form>.",
+      "soluzione": [ "<fieldset></fieldset>" ]
+    },
+    {
+      "id": 9,
+      "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <img src='../../html-image.png' alt='logo html'> <ul> <li>h1</li> <li>p</li> <li>img</li> </ul>   <a href='https://www.w3schools.com/html/default.asp'>visualizza tutti i tag</a> <form action='../../ringraziamenti.html' method='GET'> <fieldset></fieldset> </form> </body> </html>",
+      "titolo": "Tappa 9: Impara a creare una legend",
+      "descrizione": "Il tag <legend> viene utilizzato all'interno di un <fieldset> per fornire una descrizione del gruppo di campi. Questo aiuta a chiarire la finalità del gruppo di campi, migliorando l'accessibilità e l'usabilità del modulo.\n\nLa legenda è visualizzata di solito sopra il gruppo di campi, permettendo agli utenti di capire facilmente cosa stanno per compilare.",
+      "consegna": "Aggiungi un tag <legend> all'interno di <fieldset> e scrivi 'Informazioni utente'.",
+      "soluzione": [ "<legend>Recensione</legend>" ]
+    },
+    {
+      "id": 10,
+      "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <img src='../../html-image.png' alt='logo html'> <ul> <li>h1</li> <li>p</li> <li>img</li> </ul>   <a href='https://www.w3schools.com/html/default.asp'>visualizza tutti i tag</a> <form action='../../ringraziamenti.html' method='GET'> <fieldset> <legend>Informazioni utente</legend> </fieldset> </form> </body> </html>",
+      "titolo": "Tappa 10: Impara a richiedere dati",
+      "descrizione": "Il tag <input> in HTML viene utilizzato per creare campi di inserimento dati in un modulo. Può avere vari tipi, come 'text', 'checkbox', 'radio', 'email', 'password' e altro ancora. Ogni tipo di input ha una funzionalità specifica.\n\nNel nostro caso, utilizziamo un campo di tipo 'text' che permette all'utente di inserire del testo libero. Gli attributi come 'placeholder' possono essere usati per mostrare un testo guida all'interno del campo, che scompare quando l'utente inizia a digitare.",
+      "consegna": "Aggiungi un campo di input di tipo 'text' all'interno di <fieldset>.",
+      "soluzione": [ "<input type='text' placeholder='Inserisci la tua recensione'>" ]
+    },
+    {
+      "id": 11,
+      "codice": "<!DOCTYPE html> <html> <head> </head> <body> <h1>TagHunter</h1> <p>scopri tutti i tag</p> <img src='../../html-image.png' alt='logo html'> <ul> <li>h1</li> <li>p</li> <li>img</li> </ul>   <a href='https://www.w3schools.com/html/default.asp'>visualizza tutti i tag</a> <form action='../../ringraziamenti.html' method='GET'> <fieldset> <legend>Recensione</legend> <input type='text' placeholder='Inserisci la tua recensione'> </fieldset> </form> </body> </html>",
+      "titolo": "Tappa 11: Impara a inviare dati",
+      "descrizione": "Il tag <button> in HTML è utilizzato per creare pulsanti interattivi, come quelli per inviare un modulo. Quando viene cliccato, il pulsante invia i dati contenuti nel modulo al server.\n\nIl tipo 'submit' è usato per i pulsanti di invio. È possibile personalizzare il testo visualizzato sul pulsante, come 'Invia', 'Annulla', o altro a seconda delle necessità.",
+      "consegna": "Aggiungi un pulsante <button> con il testo 'Invia' all'interno di <fieldset> e premilo.",
+      "soluzione": [ "<button type='submit'>Invia</button>" ]
+    }
+  ]
+}
